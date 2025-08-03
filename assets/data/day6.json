@@ -1,0 +1,19 @@
+{
+    "erica":{},
+    "lispyknife":{},
+    "jn":{},
+    "yves":{},
+    "mado": {
+        "dialogues":{
+            "click":[
+                {"character":"{{mado}}","text":"...", "options":[
+                    {"text":"Which cigarettes were yours?","response":[{"character":"{{mado}}","text":"Menthol Morleys. Thought you'd remember by now."}]}
+                ]}
+            ]
+        }
+    },
+    "outro":{
+        "characters":[{"key":"gail","x":0,"y":0},{"key":"raph","x":0,"y":0}],
+        "dialogues":{}
+    }
+}

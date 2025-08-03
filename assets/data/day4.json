@@ -1,0 +1,162 @@
+{
+    "felix":{
+        "characters": [{"key":"felix"}],
+        "order": [""],
+        "money":250,
+        "dialogues":{
+        },
+        "next":"nunsd4"
+    },
+    "nunsd4":{
+        "characters":[{"key":"babette"},{"key":"lucie"}],
+        "order": ["fleuriesp"],
+        "money":250,
+        "dialogues":{
+            "entry":[
+                {"character":"Babette", "text":"Good morning, and may your day be as bright as your smile and as lovely as your heart."},
+                {"character":"Lucie", "text":"Blessed morning, sweet face. We're here for cigarettes, but decided to be a little poetic about it today."},
+                {"character":"Lucie", "text":"*cough*"},
+                {"character":"Lucie", "text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?"}
+            ],
+            "click":[
+                {"character":"Babette","text":"...What about smoking it behind the pharmacy again? No one ever bothers us there."},
+                {"character":"Lucie","text":"Mmh... I was thinking we could go by St. Dymphne's today. Just for a minute, before work."},
+                {"character":"Babette","text":"...What for?"},
+                {"character":"Lucie","text":"I feel like I should talk to Father Jean-Noël. About the organ..."},
+                {"character":"Babette","text":"Huh? About what? Don't tell me you suddenly feel guilty and want to tell him about... that, do you?"},
+                {"character":"Lucie","text":"What? No! Oh God, calm down."},
+                {"character":"Lucie","text":"It's just... Matron asked something weird yesterday. If Father Jean-Noël had started getting ready for the organ festival, or... something like that."},
+                {"character":"Lucie","text":"I said something like, \"yeah, haha, with a dead organ\", but she just gave me this confused look. Like she had no idea what I meant.","flag":"nunsd4clicked"}
+            ],
+            "click_nunsd4clicked":[
+                {"character":"Babette","text":"That's... weird.", "options":[
+                    {"text":"She doesn't know it's dead?", "response":[{"character":"","text":"...That's impossible. Father Jean-Noël has to report to the bishop every week. And if the bishop knows, you can be sure Matron does too. That's just how it works.", "options":[
+                        {"text":""},
+                        {"text":""},
+                        {"text":""}
+                    ]}]},
+                    {"text":"Not a cigar today?", "response":[{"character":"","text":"..."}]},
+                    {"text":"Can you repeate the riddle?", "response":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?"}]},
+                    {"text":"..."}
+                ]}
+            ],
+            "wrong_items":[{"character":"","text":""}],
+            "wrong_price":[{"character":"","text":""}],
+            "checkout":[{"character":"","text":"", "onComplete":"scene_end"}]
+        },
+        "next":"yves"
+    },
+    "yves":{
+        "characters": [{"key":"yves"}],
+        "order": [""],
+        "money":250,
+        "dialogues":{
+            "click":[
+                {"character":"Yves","text":"...","options":[
+                    {"text":"About the left panel...","if":"dots", "ifnot":"dots_asked", "response":[
+                        {"character":"Gail","text":"Maybe there was something weird there?"},
+                        {"character":"Gail","text":"(If that newspaper doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
+                        {"character":"Yves","text":"Hm... Pipes there were worse. Weirdly worse than the rest of the buffet. But nothing too special. Old things fall apart funny sometimes."},
+                        {"character":"Yves","text":"Strange thing to ask.","onComplete":"click"}
+                    ]},
+                    {"text":"About organ's bellows...","if":"bellows","ifnot":"bellows_asked","flag":"bellows_asked","response":[
+                        {"character":"Gail","text":"(Alright. Let's pull that thread.)"},
+                        {"character":"Gail","text":"Couldn't it have been prevented? I heard bellows are often the first thing to go. Problematic part."},
+                        {"character":"Gail","text":"...Most irritating to check."},
+                        {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? Whole thing was dying already."},
+                        {"character":"Gail","text":"And you helped it die faster?"},
+                        {"character":"Yves","text":"I kept it breathing longer than it had any right to."},
+                        {"character":"Yves","text":"..."},
+                        {"character":"Yves","text":"..."},
+                        {"character":"Yves","text":"Well. Maybe I could've done my job better."},
+                        {"character":"Yves","text":"...I'll take it off the repair cost. Not much, but fair's fair."},
+                        {"character":"Yves","text":"You can be really nasty, huh?","onComplete":"click"}
+                    ]},
+                    {"text":"Still nicotine-free?", "once":true, "response":[
+                        {"character":"Yves","text":"So far, so good. Just came back from the nun, actually."},
+                        {"character":"Gail","text":"The one who stick needles in your...","options":[
+                            {"text":"Teeth?", "response":[{"character":"Yves","text":"Heavens, no. Still got all my teeth, and I intend to keep them. Just the ears."},{"character":"Gail","text":"(Okay, so The Tooth isn't his.)","onComplete":"ears"}]},
+                            {"text":"Ears?", "response":[{"character":"Yves","text":"That's right.","onComplete":"ears"}]},
+                            {"text":"Cheeks?", "response":[{"character":"Yves","text":"...What, to grow whiskers? No, no. The ears.","onComplete":"ears"}]}
+                        ]}
+                    ]},
+                    {"text":"..."}
+                ]}
+            ],
+            "ears":[{"character":"Yves","text":"If you're curious, talk to Sister ???. She does nerves, hiccups and bad habits."}]
+        },
+        "break":[{"character":"Gail", "text": "..."}],
+        "next":"jeannoel"
+    },
+    "jeannoel":{
+        "characters": [{"key":"jeannoel"}],
+        "order": [""],
+        "money":250,
+        "dialogues":{
+        },
+        "next":"erica"
+    },
+    "erica":{
+        "characters": [{"key":"erica"}],
+        "order": ["fleuriesp"],
+        "money":200,
+        "dialogues":{
+            "entry":[
+                {"character":"Érica","text":"Evening! I've made a decision. Today, I become mysterious."},
+                {"character":"Érica","text":"Cute pink cigarettes, please.", "options":[
+                    {"text":"No", "flag":"nocigs", "response":[
+                        {"character":"Gail","text":"Not during my shift. I refuse to have this on my conscience."},
+                        {"character":"Gail","text":"(...I always hated being called her bad influence.)"},
+                        {"character":"Érica","text":"Oh come on. Taking a moral stance? You?"},
+                        {"character":"Gail","text":"..."},
+                        {"character":"Érica","text":"Ugh. Fine. No pink cigarettes today.", "onComplete":"click"}
+                    ]},
+                    {"text":"Okay", "response":[
+                        {"character":"Gail","text":"Who am I to stop you."},
+                        {"character":"Gail","text":"(...They always called me her bad influence anyway.)"},
+                        {"character":"Érica","text":"Perfect. Thank you."}
+                    ]}
+                ]}
+            ],
+            "click":[
+                {"character":"Érica","text":"...","options":[
+                    {"text":"What was behind organ's left panel?","if":"dots","ifnot":"dots_asked","flag":"dots_asked","response":[
+                        {"character":"Érica","text":"...Oh. So you found that."},
+                        {"character":"Érica","text":"Okay, look... Before you say anything - I swear I was super careful. But you know how it is... You start examining small weird cracks and suddenly you're halfway inside a giant antique instrument."},
+                        {"character":"Érica","text":"I found that weird puzzle in a huge pile of letters and thought it might be some secret message, hidden confession or, I don't know, a cursed artifact or something. It just felt so... important.","onComplete":"organ"}
+                    ]},
+                    {"text":"Everyone talk about the seal","response":[
+                        {"character":"Érica","text":"Letters to the Seal"}
+                    ]},
+                    {"text":"Dental Cinderella Investigation"},
+                    {"text":"(End conversation)","if":"nocigs", "event":"end"},
+                    {"text":"...","ifnot":"nocigs"}
+                ]}
+            ],
+            "organ":[
+                {"character":"Érica","text":"...","options":[
+                    {"text":"What did you find?","response":[
+                        {"character":"Érica","text":"A lot of scribbled notes, marbles, dead moth in a matchbox... even a half-full tube of condensed milk. A whole hidden world stuffed behind that panel."},
+                        {"character":"Érica","text":"I think the local kids were using it as their secret mailbox. And maybe also a bit of a rubbish bin..."},
+                        {"character":"Érica","text":"It's kind of adorable. But yeah, no ancient mysteries or secret artifacts.","onComplete":"organ"}
+                    ]},
+                    {"text":"What happened to the organ?","response":[
+                        {"character":"Érica","text":"Well... there is a tiny chance that I knocked something loose. A pipe or... tube? Some old metal thing. It made a really sad dying sound."},
+                        {"character":"Érica","text":"I panicked, obviously. But I tried to put everything back how I found it... Ish. I mean, it still played at the next mass, so I convinced myself it was fine."},
+                        {"character":"Érica","text":"Also... let's be real, all that junk the kids were cramming in there did more damage anyway. Probably. So, you know, I'm not the only one to blame...","onComplete":"organ"}
+                    ]},
+                    {"text":"...","event":"click"}
+                ]},
+                {"character":"Érica","text":"...That's not great, isn't it?"},
+                {"character":"Érica","text":"..."},
+                {"character":"Érica","text":"I'll... sort something out. Make up for it somehow.","onComplete":"click"}
+            ],
+            "end":[
+                {"character":"Érica","text":"FRIDAY EVENING AHH scooter ride"}
+            ],
+            "checkout":[
+                {"character":"Érica","text":"FRIDAY EVENING AHH scooter ride"}
+            ]
+        }
+    }
+}

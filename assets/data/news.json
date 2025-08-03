@@ -1,0 +1,47 @@
+[
+    {
+        "Front Page": {
+            "Seal Pupping Season Begins": ["The annual seal pupping season has officially begun along the Larris coastline, with early sightings reported near the eastern cliffs and the edge of the moors.","Residents are reminded not to approach the colony. Disturbing the animals can result in injury or fines.","Binoculars are available for public use at the harbor office. One pair has gone missing already."],
+            "Organ Out of Order":["Fr. Jean-Noël has announced that the organ at St. Dymphne's has gone silent. As of this Sunday, services are being held without music until further notice.", "It always sounded a little haunted, but everyone agrees - that's what made it ours."]
+        },
+        "News & Classifieds": {
+            "Minor Delay in Postal Deliveries":["Postal service will be slightly delayed this week due to a misadventure involving our dedicated postman, a muddy hill and his usual luck.","Deliveries will resume shortly, in the meantime, mail may be collected at the post office during regular hours."],
+            "Tired of Small-Town Tides?":["Montpensier Fisheries Ltd. is recruiting seasonal crew for city trawlers. Weekly pay. Apply at the harbor office before Thursday."],
+            "Last Call for Ice Cream":["As usual, the pier's ice cream truck will switch to hot soup service on October 1st. Spoons deposit scheme remains the same."]
+        },
+        "Miscellany": {
+            "Letters to the Editor":["Trail Markers\nTo whoever keeps turning moor trail markers into fairy rings - please stop. Tourists have started getting stuck in the bog again.","Re: Visiting Hours Change\nNot everyone can get off work by six - especially out-of-towners like us from the city. It's our hospital too, even if it's on your side of the road.","Cave canem\nI wish to report that my interaction with the newly appointed medical staff member, identifiable by red hair pigmentation, created an atmosphere of interpersonal discomfort. Condolences to the nuns in prolonged proximity.","* Initial submission revised due to foul language and concerning analogies."],
+            "Typewriter Mystery No. 25":["Forgotten Lungs\n1) 2sp 2_ 2sp 2_ 7sp 2_ 6sp 2_..."],
+            "SPECIAL WORDOKU OFFER!":["Exclusively from the corner of Fire Brigade St and Pyromaniacs Blvd!..."]
+        }
+    },
+    {
+        "Front Page": {
+            "Seal": ["The lone seal spotted near the soup truck this Friday has not returned to the colony. Instead, it has made its way through town, visiting alleys, docks, and even the steps of St. Dymphne's.","Residents are divided: some say it's a blessing, others worry about disease or bad omens.","A group of children were seen attempting to \"guard\" the seal near the co-op loading dock on Saturday afternoon, using cardboard signs and a stolen traffic cone. No injuries were reported."],
+            "Church News ??silenceyes??":["News to show if there's silenceyes flag in the registry"],
+            "Church News ??silenceno??":["News to show if there's silenceno flag in the registry"]
+        },
+        "News & Classifieds": {
+            "Communion Wafers Update":["The sisters at St. Dymphne's have confirmed that starting next Sunday, communion will feature the return of their popular pumpkin spice wafers.","Available while the leaves fall and no one from the diocese is watching."],
+            "Friday Music at Expresso":["Live music returns to the Expresso coffee bar this Friday. A guest singer's planned a short set - possibly with piano, if SOMEONE decides to show up this time."],
+            "Family News?idk":[""]
+        },
+        "Miscellany": {
+            "Letters to the Editor":["Re: Re: Visiting Hours Change\nUHSDudshfisduf","","Dear Seal\nAAaaaaaaaaaaa","Re: Cave canem\nU wanna talk irl or too afraid? Woof."],
+            "Typewriter Mystery No. 26":["A Plant to Calm Down a Nun\n1)  6sp 2_ 15sp 2\" 2bsp 1\/..."]
+        }
+    },
+    {
+        "Front Page": {
+            "...":[""]
+        },
+        "News & Classifieds": {
+            "...":[""]
+        },
+        "Miscellany": {
+            "Letters to the Seal":[""],
+            "Fr. Jean-Noel's Column":[""],
+            "Typewriter Mystery No. 26":[""]
+        }
+    }
+]

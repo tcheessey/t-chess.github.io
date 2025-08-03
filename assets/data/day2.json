@@ -1,0 +1,351 @@
+{
+    "erica1":{
+        "characters": [{"key":"erica"}],
+        "dialogues": {
+            "entry": [
+                { "character": "Gail", "text": "(Oh that's Érica. Sweet girl powered by hyperfixations and the ability to find childlike wonder in the most boring shit imaginable.)" },
+                { "character": "Gail", "text": "(Probably the only one who gave a shit about me before I left.)" },
+                { "character": "Érica", "text": "Gail! Oh my god, it really is you." },
+                { "character": "Érica", "text": "I totally thought you'd leave Larris again right after the funeral. Like poof - stormy beach, dramatic coat, no forwarding address." },
+                { "character": "Érica", "text": "But yesterday Father Jean-Noël said he saw you in here, and I thought he was joking. But look at that. You didn't leave." },
+                { "character": "Gail", "text": "I still have to deal with the flat. Paperwork, dust, old things. After that I can...", "options":[
+                    {"text":"Sell it and leave the town", "flag":"leaving", "response":[
+                        {"character":"Gail", "text":"(Here comes that soft disappointed look. I deserve it.)"},
+                        {"character":"Érica", "text":"Oh. Right. Makes sense, I guess."},{"character":"Érica", "text":"Well, then I'll just enjoy it while it lasts."},{ "character": "Érica", "text": "..." }
+                    ]},
+                    {"text":"Try fixing it up and stay here", "flag":"staying", "response":[{"character":"Érica", "text":"Really? That's... kind of nice. I mean, it'd be nice. If you did."}]}
+                ] },
+                { "character": "Érica", "text": "But since when are you a cashier? I always pictured you ending up in a lighthouse, or something like that. Hallucinating mermaids and fighting with gulls and stuff.", "options":[
+                    {"text":"I don't work here", "response":[{"character":"Érica", "text":"Uh oh, smells like denial in here."}]},
+                    {"text":"Not sure how this happened", "response":[{"character":"Érica", "text":"Yeah... Félix happened, I suppose."}]},
+                    {"text":"I run the place now", "response":[{"character":"Érica", "text":"That's my girl."}]}
+                ]},
+                { "character": "Érica", "text": "Well, point is - I'm glad you're back.", "onComplete":"main" }
+            ],
+            "main":[
+                {"character":"Érica", "text":"...", "options":[
+                    {"text":"What about you?", "event":"wby"},
+                    {"text":"Still obsessed with seals?", "event":"seals"},
+                    {"text":"(End conversation)", "event":"end"}
+                ]}
+            ],
+            "wby":[
+                {"character":"Érica", "text":"Hmm... well, I finished school last year. Now I write little pieces for the paper - whatever happens in Larris, basically."},
+                {"character":"Érica", "text":"Plus I sometimes send spooky stories to one underground magazine in Montpensier. "},
+                {"character":"Érica", "text":"Oh, and I got a scooter. Finally. It's silly, but I love it."},
+                {"character":"Érica", "text":"...I think about leaving too, sometimes. Traveling. Maybe doing real journalism. But... I guess I'm not as brave as you were."},
+                {"character":"Gail", "text":"(That's cute how she thinks it was about being brave rather than running away.)", "onComplete":"main"}
+            ],
+            "seals":[
+                {"character":"Érica", "text":"Yeah... My sweet big floppers. White puffballs, speckled blobs, silly whiskery noses - I love every single version."},
+                {"character": "Érica","text": "You know, they showed up a bit early this year, and on such odd night."},
+                {"character": "Érica","text": "First seal appeared, all round and confused. Full moon overhead. And a few hours later - boom. Our sad little organ falls apart."},
+                {"character": "Érica","text": "...By the way. Do you know who's helping out at the church these days?"},
+                {"character": "Gail","text": "No? Jean-Noël doesn't handle it all himself anymore?"},
+                {"character": "Érica","text": "Oh, I'll let you find out. It's more fun that way.", "onComplete":"main"}
+            ],
+            "end":[
+                {"character":"Gail","text":"So... Did you want to buy something, or...?"},
+                {"character":"Érica","text":"Oh, no no, I just wanted to see you before work."},
+                {"character":"Érica","text":"I'll come bug you again later! Take care, okay?", "onComplete":"scene_end"}
+            ],
+            "after": [
+                { "text": "There's something on the floor. Looks like a torn-out notebook paper with some pattern." },
+                { "character": "Gail", "text": "(Of course Érica dropped it. Some things never change.)" },
+                { "character": "Gail", "text": "..." },
+                { "character": "Gail", "text": "(I'll take a look when it's quiet.)" ,"onComplete":"next_scene"}
+            ]
+        },
+        "next":"postman"
+    },
+    "postman":{
+        "characters":[{"key":"postman"}],
+        "order":["jcb","krowkaX3"],
+        "money":200,
+        "dialogues":{
+            "entry":[
+                {"character":"Postman","text":"Good morning. What a beautiful day it is today."},
+                {"character":"Postman","text":"No parcels or letters for this address. Just here for the blue Jesuses and three toffies, please."}
+            ],
+            "entry_beast":[
+                {"character":"Postman","text":"Good morning. What a beautiful day it is today."},
+                {"character":"Postman","text":"I've got a parcel for the shop. Could you sign here?"},
+                {"character":"Gail","text":"Here you go."},
+                {"character":"Postman","text":"Thanks. And I'll take the blue Jesuses and three toffies, please."}
+            ],
+            "click":[
+                {"character":"Postman","text":"...","options":[
+                    {"text":"You're already back at work?", "required":true, "once":true, "response":[
+                        {"character":"Postman","text":"And you're already back in town, aren't you?"},
+                        {"character":"Postman","text":"...Of course I'm back. A little \"mild head injury and mud exposure\" won't stop me or my bike.","options":[
+                            {"text":"That's the spirit","response":[{"character":"Postman","text":"Glad you understand.", "onComplete":"bell"}]},
+                            {"text":"I'd just lie in a ditch forever","point":"p","response":[{"character":"Postman","text":"Yeah, I used to feel like that. Then one day I decided I was a cat, and God gave me nine lives. He seems to like cats.", "onComplete":"bell"}]}
+                        ]}
+                    ]},
+                    {"text":"...What are blue Jesuses?","once":true,"response":[{"character":"Postman","text":"Oh, blue JC. Jesus Christ, a lot of people call them that. You know what those letters actually stand for?","options":[
+                        {"text":"Probably Jean-Claude or some other name","response":[{ "character": "Postman", "text": "Okay. Sounds legit."}]},
+                        {"text":"Jesus Christ for sure","point":"s","response":[{ "character": "Postman", "text": "I like this version too."}]},
+                        {"text":"Just Crap","point":"n","response":[{ "character": "Postman", "text": "Come on, they're not that bad."}]},
+                        {"text":"I have no idea","point":"p","response":[{ "character": "Postman", "text": "..."}]}
+                    ]}]},
+                    {"text":"..."}
+                ]}
+            ],
+            "bell":[{ "character": "Postman", "text": "Lost the bell again, though. Shame. I liked that one.", "onComplete":"click" }],
+            "wrong_items": [{ "character": "Postman", "text": "That's not mine." }],
+            "wrong_price": [{ "character": "Postman", "text": "It's 147." }],
+            "checkout":[{"character":"Postman","text":"Thanks. Back to work.", "onComplete":"scene_end"}]
+        },
+        "next":"raph"
+    },
+    "raph":{
+        "characters": [{"key":"raphael"}],
+        "order":["fleuriesy"],
+        "money":160,
+        "dialogues":{
+            "entry":[
+                {"character":"Rafaelka","text":"..."},
+                {"character":"Gail","text":"(Ah, yes. Shared lice, first cigarettes and years of mutual embarrassment.)"},
+                {"character":"Gail","text":"(That special kind of friend you've known long enough to forget how it started, and way too long to come out of it clean. Nostalgia with a side of nausea.)"},
+                {"character":"Rafaelka","text":"...","options":[
+                    {"text":"Hello?", "response":[
+                        {"character":"Rafaelka","text":"Hey. Yeah, I heard you were back."},
+                        {"character":"Gail","text":"Came to say hi to your dear old friend?"},
+                        {"character":"Rafaelka","text":"I'm here to buy Jean-Noël his mugwort Fleuries. That's all."}
+                    ]},
+                    {"text":"Not in jail?", "point":"n","response":[
+                        {"character":"Rafaelka","text":"Huh. Not in a padded room, then?"},
+                        {"character":"Rafaelka","text":"Good start. Still a little bitch, I see."},
+                        {"character":"Rafaelka","text":"...Jean-Noël asked me to pick up his mugwort Fleuries. That's all."}
+                    ]},
+                    {"text":"Do I see a rosary bracelet?", "point":"s","response":[
+                        {"character":"Rafaelka","text":"Yeah. Cool one. Heavy beads, solid grip. Church-approved stress ball, as Jean-Noël says."},
+                        {"character":"Rafaelka","text":"...He asked me to pick up his mugwort Fleuries. That's all."}
+                    ]},
+                    {"text":"(Not talking to him first)", "point":"p", "response":[
+                        {"character":"Rafaelka","text":"What, still haven't learned to form a thought?"},
+                        {"character":"Rafaelka","text":"No, I didn't end up in jail like you all expected. Yeah, that's a rosary you're staring at. A cool one. Not some dainty shit, obviously."},
+                        {"character":"Rafaelka","text":"...Jean-Noël asked me to pick up his mugwort Fleuries. That's all."}
+                    ]}
+                ]}
+            ],
+            "click":[
+                {"character":"Rafaelka","text":"...", "options":[
+                    {"text":"So you hang out with the church now?", "required":true, "flag":"churchboy", "response":[
+                        {"character":"Rafaelka","text":"*sigh*"},
+                        {"character":"Rafaelka","text":"...As you probably remember, a couple of years ago the juvenile police stuck me with community service there. Thought I'd fake it, punch a few pews and be done."},
+                        {"character":"Rafaelka","text":"Then... a lot of things happened. I beat the shit out of a junkie who pissed on the altar. Slept in one of the graves I dug. Woke up to chase looters out of the cemetery."},
+                        {"character":"Rafaelka","text":"...Time passed. My hours were up."},
+                        {"character":"Rafaelka","text":"I just... stayed."},
+                        {"character":"Rafaelka","text":"..."},
+                        {"character":"Rafaelka","text":"Doesn't matter.","onComplete":"click"}
+                    ]},
+                    {"text":"Heard the nuns think you wrecked the organ", "once":true,"response":[
+                        {"character":"Rafaelka","text":"Oh, of course they'd think it was me. Everyone thinks that."},
+                        {"character":"Gail","text":"(God's angriest little helper.)"},
+                        {"character":"Rafaelka", "text":"Yeah, sure. Blame the walking fuck-up. Wouldn't be the worst thing I've done, right?", "options":[
+                            {"text":"I can believe it, honestly", "response":[
+                                {"character":"Rafaelka", "text":"Jesus. You really don't think people can get better?", "options":[
+                                    {"text":"I didn't say that", "response":[{"character":"Rafaelka","text":"They can. Rare, though.", "onComplete":"click"}]},
+                                    {"text":"Not really", "flag":"butthurt", "response":[
+                                        {"character":"Rafaelka", "text":"You know what? Fuck this."},
+                                        {"character":"Rafaelka", "text":"I'm leaving today. Do me a favour and be gone again when I get back.", "onComplete":"scene_end"}
+                                    ]}
+                                ]}
+                            ]},
+                            {"text":"Not saying it's true", "response":[{"character":"Rafaelka","text":"Doesn't help to repeat it. Just give me the damn cigs.","onComplete":"click"}]}
+                        ]}
+                    ]},
+                    {"text":"So you're a good boy now?", "if":"churchboy", "response":[{"character":"Rafaelka", "text":"Gross. Trying to be. At least haven't hated myself as much lately.", "onComplete":"click"}]},
+                    {"text":"What did your boss ask you to buy?", "response":[{"character":"Rafaelka","text":"Those flowery ones. Mugwort something... Fleuries."}]},
+                    {"text":"..."}
+                ]}
+            ],
+            "wrong_items": [{ "character": "Rafaelka", "text": "What the hell is that?" }],
+            "wrong_price": [{ "character": "Rafaelka", "text": "Math too hard?" }],
+            "checkout": [
+                {"character":"Rafaelka","text":"I'm leaving today. Took a shift on a trawler to make some money before the weather turns to shit. Just thought I'd say something before going. Unlike some people."},
+                {"character":"Gail","text":"(Ah. There it is.)"},
+                {"character":"Rafaelka","text":"Not like you'll still be here when I get back, obviously."},
+                { "character":"Rafaelka","text": "Yeah. That's all.", "onComplete":"scene_end" }
+            ],
+            "after_butthurt":[{"character":"Gail","text":"Wow. Didn't even take the cigs.","options":[
+                {"text":"Loser","point":"n"},
+                {"text":"..."}
+            ]}]
+        },
+        "break":[
+            {"character":"Gail", "text":"*sigh*"}
+        ],
+        "next":"erica2"
+    },
+    "erica2":{
+        "characters": [{"key":"erica"}],
+        "order": ["larissa","newsX3"],
+        "money":300,
+        "dialogues":{
+            "entry":[
+                {"character":"Érica","text":"Gail."},{"character":"Érica","text":"Oh god, you won't believe this."},
+                {"character":"Érica","text":"There's a seal. Like, on the pavement, near the soup truck. Seal. Just lying there."},
+                {"character":"Érica","text":"Some of the fishermen saw it first. Said it's not scared. Not hurt. Just... there. Nobody knows what to do."},
+                {"character":"Érica","text":"I ran into Eel Lady down at the docks and she said I could take a few fish if I brought her some chewing tobacco. So yeah. This, please."}
+            ],
+            "click":[{"character":"Érica","text":"Sorry, Gail. Seal first. Gossip later.","options":[
+                {"text":"What was it again?","ifnot":"wrap","response":[{"character":"Érica","text":"Chewing tobacco. For Eel Lady."}]},
+                {"text":"What was it again?","if":"wrap","response":[{"character":"Érica","text":"Chewing tobacco, plus like, three newspapers."}]},
+                {"text":"..."}
+            ]}],
+            "wrong_items":[{"character":"Érica","text":"Oh, could you also add a couple of newspapers? To wrap the fish. Maybe... three? Better too many than not enough, right?","flag":"wrap"}],
+            "wrong_items_wrap":[{"character":"Érica","text":"Chewing tobacco and three newspapers, Gail. If you're forgetting too, we're doomed."}],
+            "checkout":[{"character":"Érica","text":"You're the best. Thanks."},{"character":"Érica","text":"Okay. I've got the fish, I've got the chew, I've got the newspaper. Oh no, the camera. I need a photo for the paper."}, {"character":"Érica","text":"Gotta run, see you later!", "onComplete":"scene_end"}]
+        },
+        "next":"mado"
+    },
+    "mado":{
+        "characters": [{"key":"mado"}],
+        "order":["morleyb"],
+        "money":200,
+        "dialogues":{
+            "entry":[
+                {"character":"Beret Girl","text":"Hi.", "options":[
+                    {"text":"Hi, Lavender Fleuries", "response":[{"character":"Beret Girl","text":"...Not even close. Menthol Morleys, please."}]},
+                    {"text":"Hi, Menthol Morleys","flag":"morleys","response":[
+                        {"character":"Beret Girl","text":"...Oh. Yeah, right.", "faces": {"mado":"wtf"}},
+                        {"character":"Beret Girl","text":"...And you're?..", "facesAfter": {"mado":null}, "options":[
+                            {"text":"Abigaïl", "flag":"mado_abigail", "response":[{"character":"Beret Girl","text":"Okay, Abigaïl. I'm Madeleine, by the way.", "options":[
+                                {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed."}]},
+                                {"text":"Like the cake?","response":[{"character":"{{mado}}", "faces": {"mado":"side"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them. Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                            ]}]},
+                            {"text":"Gail", "flag":"mado_gail","response":[{"character":"Beret Girl","text":"Okay, Gail. I'm Mado, by the way."}]},
+                            {"text":"Fish, short for Félicia", "flag":"mado_fish","response":[{"character":"Beret Girl","text":"...Fish? Alright... I'm Mado. Short for Madeleine.", "options":[
+                                {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed."}]},
+                                {"text":"Like the cake?","response":[{"character":"{{mado}}", "faces": {"mado":"side"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them. Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                            ]}]}
+                        ]}
+                    ]},
+                    {"text":"Hi, Menthol JCs", "response":[{"character":"Beret Girl","text":"...Ehm. Menthol Morleys, please."}]},
+                    {"text":"...", "response":[{"character":"Beret Girl", "faces": {"mado":"grr"}, "facesAfter": {"mado":null},"text":"...Cool. Menthol Morleys. Please."}]}
+                ]}
+            ],
+            "click":[
+                {"character":"{{mado}}","text":"...Can you be faster, please?","options":[
+                    {"text":"Where're you always hurrying to?","required":true,"response":[{"character":"{{mado}}", "faces": {"mado":"side"},"text":"Hospital. I'm here for my training year."},{"character":"Gail","text":"(Ha, knew it. Serious face. Loud heels. Of course she's not local.)", "facesAfter": {"mado":null}}]},
+                    {"text":"What was it again?","response":[{"character":"{{mado}}", "faces": {"mado":"grr"}, "facesAfter": {"mado":null},"text":"Menthol Morleys. Seriously?","onComplete":"click"}]},
+                    {"text":"..."}
+                ]}
+            ],
+            "wrong_items":[{"character":"{{mado}}","text":"Seriously?"}],
+            "wrong_price":[{"character":"{{mado}}","text":"Seriously?"}],
+            "wrong_change":[{"character":"{{mado}}","text":"Seriously?"}],
+            "checkout":[{"character":"{{mado}}","text":"Thanks.", "onComplete":"scene_end"}],
+            "checkout_morleys":[{"character":"{{mado}}","text":"Thanks. Also, could I...", "faces": {"mado":"side"}},{"character":"{{mado}}", "faces": {"mado":"side-blush20"},"text":"...No. Doesn't matter. Forget it.","onComplete":"scene_end"}]
+        },
+        "next":"yvesd2"
+    },
+    "yvesd2":{
+        "characters": [{"key":"yves"}],
+        "dialogues":{
+            "entry":[
+                {"character":"Yves","text":"Good evening, {{name_yves}}. Mind if I hang around a bit? Waiting on Félix."},
+                {"character":"Yves","text":"He said he's got a plan. Which rarely end well, but they're never boring. Even told me to bring the trombone tonight."},
+                {"character":"Yves","text":"Would never miss it."},
+                {"character":"Yves","text":"What about you? Found any trouble today?","options":[
+                    {"text":"Of course", "response":[{"character":"Yves","text":"Hope everybody enjoyed it.","onComplete":"root"}]},
+                    {"text":"Too tired for trouble", "response":[{"character":"Yves","text":"You're too young to sound that boring.","onComplete":"root"}]},
+                    {"text":"Probably not", "response":[{"character":"Yves","text":"Happens to the best of us.","onComplete":"root"}]}
+                ]}
+            ],
+            "root":[
+                {"character":"Yves","text":"...","options":[
+                    {"text":"How are organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.","onComplete":"root"}]},
+                    {"text":"You hear about the seal?","response":[{"character":"Yves","text":"Saw it. Smart beast. Lies around, gets fed. Does better than most of us.","onComplete":"root"}]},
+                    {"text":"About organ's left panel...","if":"dots","response":[
+                        {"character":"Gail","text":"Maybe there was something weird there?"},
+                        {"character":"Gail","text":"(If that newspaper doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
+                        {"character":"Yves","text":"Hm... That side was much worse than the rest of the buffet. Pipes knocked out of place, some mold, bit of rot. But nothing too special. Old things fall apart funny sometimes."},
+                        {"character":"Yves","text":"...Strange thing to ask.","onComplete":"root"}
+                    ]},
+                    {"text":"About organ's bellows...","if":"bellows","flag":"bellows_asked","response":[
+                        {"character":"Gail","text":"(Alright. Let's pull that thread.)"},
+                        {"character":"Gail","text":"Couldn't it have been prevented? I heard bellows are often the first thing to go. Problematic part."},
+                        {"character":"Gail","text":"...Most irritating to check."},
+                        {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? It wasn't only about bellows, the whole left half was a mess. Pipes knocked out of place, some mold, bit of rot. Keyboard too - half the keys loose, a few straight-up gone."},
+                        {"character":"Yves","text":"So... yeah. Whole thing was dying already."},
+                        {"character":"Gail","text":"And you helped it die faster?"},
+                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports sent straight to the diocese. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed."},
+                        {"character":"Yves","text":"Eventually I stopped checking it properly. Just looked at the parts you could see without crawling in all the way. Figured if they didn't care, why should I?", "options":[
+                            {"text":"So you cracked first, like a loser?", "point":"n"},
+                            {"text":"All that ass and no squat", "point":"s"},
+                            {"text":"Sometimes rot's the only answer...", "point":"p"},
+                            {"text":"(Let silence do the work)"}
+                        ]},
+                        {"character":"Yves","text":"..."},
+                        {"character":"Yves","text":"Well. Maybe I could've done my job better."},
+                        {"character":"Yves","text":"...I'll take it off the repair cost. Not much, but fair's fair."},
+                        {"character":"Yves","text":"You can be really nasty, huh?","onComplete":"root"}
+                    ]},
+                    {"text":"(End conversation)","event":"scene_end"}
+                ]}
+            ]
+        },
+        "next":"felix2"
+    },
+    "felix2":{
+        "characters": [{"key":"yves"},{"key":"felix"}],
+        "dialogues":{
+            "entry":[
+                {"character":"Félix","text":"Evening, sunshines."},
+                {"character":"Gail","text":"Took you long enough."},
+                {"character":"Félix","text":"Time is fake. Anyway, you closing?"},
+                {"character":"Yves","text":"Closing sounds good."},
+                {"character":"Gail","text":"Yeah. Closing sounds good."},
+                {"character":"Félix","text":"Perfect. Grab the key. Pretend we're a real business.","onComplete":"day_end"}
+            ]            
+        }
+    },
+    "intro":[
+        {
+            "bgKey": 0, 
+            "dialog": [
+                { "text": "Some old faces and one new snout." }
+            ]
+        }
+    ],
+    "outro":{
+        "characters":[
+            {"key":"gail","x":0,"y":0},
+            {"key":"yves","x":0,"y":0},
+            {"key":"felix","x":0,"y":0}
+        ],
+        "dialogues":{
+            "start":[
+                { "character": "Gail", "text": "So... what's the plan?"},
+                { "character": "Félix", "text": "Right. The plan. The plan is simple."},
+                { "character": "Félix", "text": "Father Jean-Noël needs a grave dug, but that skinhead church boy is off playing sailor. So I offered to help. Figured I'd bring Yves along to make it feel like a party."},
+                { "character": "Yves", "text": "Ah. Manual labor and midnight brass. How can I say no."},
+                { "character": "Félix", "text": "And maybe a bottle of church wine if we charm him right. It is Friday, after all."},
+                { "character": "Félix", "text": "What about you, kid?", "options":[
+                    {"text":"Take a look at the seal", "flag":"outro2seal", "response":[{"character":"Yves","text":"Then follow the sound of Érica's voice. Can't miss it."}]},
+                    {"text":"Go bother Érica if I find her", "flag":"outro2erica","response":[{"character":"Yves","text":"Then look somewhere near the seal. Can't miss it."}]},
+                    {"text":"Sudoku and silence", "flag":"outro2sudoku","response":[{"character":"Félix","text":"Sooodoku and siiilence, dear. Got your knitting too?"}]},
+                    {"text":"Existential dread", "point":"p", "flag":"outro2dread","response":[{"character":"Félix","text":"...Jeepers creepers. Easy there."}]}
+                ]},
+                { "character": "Yves", "text": "Well, have a nice evening, {{name_yves}}.","onComplete":"bye" }
+            ],
+            "bye":[{"character":"Félix","text":"Night-night."},{ "character": "Gail", "text": "..."},{ "character": "Gail","flag":"outro2leave", "text": "...", "onComplete":"end"}],
+            "bye_yves_fish":[
+                {"character":"Félix","text":"Fish?"},
+                {"character":"Yves","text":"Mademoiselle said her name is Fish. As in Félicia."},
+                {"character":"Félix","text":"Pffft, what?"},
+                {"character":"Yves","text":"Let's go."},
+                {"character":"Félix","text":"Oh, that's amazing. Fish! Incredible. I'm gonna..."},
+                { "character": "Gail", "text": "..."},
+                { "character": "Gail", "text": "...","flag":"outro2leave", "onComplete":"theend"}
+            ],
+            "end_outro2seal":[{"text":"Gail wandered through the town square, then the park, then down to the docks. She never found the seal, just sky, sea, and gulls. That was enough.","onComplete":"theend"}],
+            "end_outro2erica":[{"text":"Gail checked Érica's house. Then the back of the post office, where the newspaper team hides. Érica wasn't anywhere, but the Friday buzz of pubs and cafés wasn't too bad either.","onComplete":"theend"}],
+            "end_outro2sudoku":[{"text":"Sudoku always calmed Gail down, even when her hand filled the numbers almost without thinking."},{"text":"Her pencil broke near the end. She couldn't find a single sharpener that hadn't been taken apart years ago. But the last few numbers were obvious, anyway.","onComplete":"theend"}],
+            "end_outro2dread":[{"text":"Gail spent the evening poking old scars, staring at the ceiling, and quietly reconsidering her entire life."},{"text":"Then she got bored and fell asleep.","onComplete":"theend"}]
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "d5start":{
+        "dialogues":{
+        },
+        "next":"postman"
+    },
+    "postman":{
+        "characters":[{"key":"postman"}],
+        "order":["jcb"],
+        "money":200,
+        "dialogues":{
+        },
+        "next":"fisherman"
+    },
+    "fisherman":{
+        "characters": [{"key":"fisherman"}],
+        "order":["jcr", "news"],
+        "money":1000,
+        "dialogues":{},
+        "break":[],
+        "next":"lucie"
+    },
+    "priest":{
+        "characters": [{"key":"lucie"}],
+        "order":["fleuriesy"],
+        "money":200,
+        "dialogues":{},
+        "next":"pierrick"
+    },
+    "babette":{
+        "characters": [{"key":"babette"}],
+        "order":["fleuriesy"],
+        "money":200,
+        "dialogues":{},
+        "next":"pierrick"
+    },
+    "pierrick":{
+        "characters": [{"key":"fisherman"}],
+        "order":["over"],
+        "money":1000,
+        "dialogues":{}
+    }
+}
