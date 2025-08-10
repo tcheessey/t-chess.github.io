@@ -41,7 +41,7 @@
             "wrong_items_st1": [{ "character": "Félix", "text": "That's not what I asked for. Again.", "faces": {"felix":"grr"},"facesAfter":{"felix":null} }],
             "click":[
                 { "character": "Félix", "text": "...", "options": [
-                    { "text": "This place wasn't a tobacconist before","required":true,"response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot. Sounds familiar?"},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.","onComplete":"click"}] },
+                    { "text": "This place wasn't a tobacconist before","required":true,"response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot."},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.","onComplete":"click"}] },
                     { "text": "Did you know my mom?","once":true, "required":true,"response": [{ "character": "Félix", "text": "Not well. By the time I came back, she had already... found God. Poor guy." }, {"character": "Félix","text":"Spent most of her time between the church and the hospital, I guess. Didn't see her here much."}, { "character": "Félix", "text": "Honestly surprised she didn't sell the place and hand it to the church.", "options":[
                         { "text": "She probably meant to","point":"p","response":[{"character":"Félix","text":"Or maybe you just need her to be the villain. Easier that way.", "onComplete":"click"}]},
                         { "text": "Well, good for me","point":"n","response":[{"character":"Félix","text":"Praise be to private property.", "onComplete":"click"}]}] }] },
@@ -82,7 +82,7 @@
             "wrong_price": [{ "character": "Fisherman", "text": "That number's fishy." }],
             "checkout":[{ "character": "Fisherman", "text": "Thanks.","faces":{"fisherman":"smile"} },{"character": "Fisherman", "text": "I ate jellyfish as a kid. Thought it was pudding.","faces":{"fisherman":"eyes-smile"}},{ "character": "Fisherman", "text": "Wasn't.","faces":{"fisherman":null},"onComplete":"scene_end" }],
             "checkout_seaglass":[{ "character": "Fisherman", "text": "Thanks.","faces":{"fisherman":"smile"} },{"character": "Fisherman", "text": "I tasted sea glass once. Thought it was candy.","faces":{"fisherman":"eyes-smile"} },{ "character": "Fisherman", "text": "Wasn't.","faces":{"fisherman":null},"onComplete":"scene_end"  }],
-            "after":[{ "character": "Gail", "text": "(Trawlers were always a thing. But lately, you only see the small boats when they're being sold.)","onComplete":"next_scene" }]
+            "after":[{ "character": "Gail", "text": "(Well, trawlers were always a thing. But lately, you only see the small boats when they're being sold.)","onComplete":"next_scene" }]
         },
         "next":"jeannoel"
     },
@@ -112,7 +112,7 @@
             ],
             "organ": [
                 {"character": "Jean-Noël", "text":"The organ is already in his care.", "options":[
-                    {"text":"So the organ had a breakdown?", "response":[{"character":"Jean-Noël","text":"Like we all do. Nothing unholy about that.","onComplete":"organ"}] },
+                    {"text":"Sounds like it had a breakdown", "response":[{"character":"Jean-Noël","text":"Like we all do. Nothing unholy about that.","onComplete":"organ"}] },
                     {"text":"Who's the repairman?", "response":[{"character":"Jean-Noël","text":"Who else but Yves? Luckily still with help from Pierrick, hanging on beside him..."},{"character":"Gail","text":"(I've probably heard of them before. Or maybe just feels like I have. This town's too small.)","onComplete":"organ"}] },
                     {"text":"Any plans for a temporary fix?", "event":"toFix", "once":true },
                     {"text":"...","event":"click"}
