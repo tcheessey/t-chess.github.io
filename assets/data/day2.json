@@ -3,24 +3,25 @@
         "characters": [{"key":"erica"}],
         "dialogues": {
             "entry": [
-                { "character": "Gail", "text": "(Oh that's Érica. Sweet girl powered by hyperfixations and the ability to find childlike wonder in the most boring trash imaginable.)" },
+                { "character": "Gail", "text": "(Oh that's Érica.)" },
+                { "character": "Gail", "text": "(Sweet girl powered by hyperfixations and the ability to find childlike wonder in the most boring trash imaginable.)" },
                 { "character": "Gail", "text": "(Probably the only one who gave a shit about me before I left.)" },
-                { "character": "Érica", "text": "Gail! Oh my god, it really is you." },
-                { "character": "Érica", "text": "I totally thought you'd leave Larris again right after the funeral. Like poof - stormy beach, dramatic coat, no forwarding address." },
+                { "character": "Érica", "text": "Gail! Oh my god, it really is you.", "faces": {"erica":"wide"} },
+                { "character": "Érica", "text": "I totally thought you'd leave Larris again right after the funeral. Like poof - stormy beach, dramatic coat, no forwarding address.","facesAfter":{"erica":null} },
                 { "character": "Érica", "text": "But then Father Jean-Noël said he saw you in here, and I thought he was joking. But look at that. You didn't leave." },
                 { "character": "Gail", "text": "I still have to deal with the flat. Paperwork, dust, old things. After that I can...", "options":[
                     {"text":"Sell it and leave the town", "flag":"leaving", "response":[
                         {"character":"Gail", "text":"(Here comes that soft disappointed look. I deserve it.)"},
-                        {"character":"Érica", "text":"Oh. Right. Makes sense, I guess."},{"character":"Érica", "text":"Well, then I'll just enjoy it while it lasts."},{ "character": "Érica", "text": "..." }
+                        {"character":"Érica", "text":"Oh. Right. Makes sense, I guess.", "faces": {"erica":"sad-nosmile"},"facesAfter":{"erica":"sad"}},{"character":"Érica", "text":"Well, then I'll just enjoy it while it lasts."},{ "character": "Érica", "text": "..." }
                     ]},
-                    {"text":"Try fixing it up and stay here", "flag":"staying", "response":[{"character":"Érica", "text":"Really? That's... kind of nice. I mean, it'd be nice. If you did."}]}
+                    {"text":"Try fixing it up and stay here", "flag":"staying", "response":[{"character":"Érica", "text":"Really? That's... kind of nice. I mean, it'd be nice. If you did.", "faces": {"erica":"wide"}}]}
                 ] },
-                { "character": "Érica", "text": "But since when are you a cashier? I always pictured you ending up in a lighthouse, or something like that. Hallucinating mermaids and fighting with gulls and stuff.", "options":[
-                    {"text":"I don't work here", "response":[{"character":"Érica", "text":"Uh oh, smells like denial in here."}]},
+                { "character": "Érica", "text": "But since when are you a cashier? I always pictured you ending up in a lighthouse, or something like that. Hallucinating mermaids and fighting with gulls and stuff.", "faces": {"erica":null}, "options":[
+                    {"text":"I don't work here", "response":[{"character":"Érica", "text":"Uh oh, smells like denial in here.", "faces": {"erica":"smile"}}]},
                     {"text":"Not sure how this happened", "response":[{"character":"Érica", "text":"Yeah... Félix happened, I suppose."}]},
-                    {"text":"I run the place now", "response":[{"character":"Érica", "text":"That's my girl."}]}
+                    {"text":"I run the place now", "response":[{"character":"Érica", "text":"That's my girl.", "faces": {"erica":"closed"}}]}
                 ]},
-                { "character": "Érica", "text": "Well, point is - I'm glad you're back.", "onComplete":"main" }
+                { "character": "Érica", "text": "Well, point is - I'm glad you're back.", "faces": {"erica":null}, "onComplete":"main" }
             ],
             "main":[
                 {"character":"Érica", "text":"...", "options":[
@@ -30,7 +31,7 @@
                 ]}
             ],
             "wby":[
-                {"character":"Érica", "text":"Hmm... well, I finished school last year. Now I write little pieces for the paper - whatever happens in Larris, basically."},
+                {"character":"Érica", "text":"Hmm... well, I finished school last year. Now I write little pieces for the paper - whatever happens in Larris, basically.", "faces": {"erica":"wide"},"facesAfter":{"erica":null}},
                 {"character":"Érica", "text":"Plus I sometimes send spooky stories to one underground magazine in Montpensier. "},
                 {"character":"Érica", "text":"Oh, and I got a scooter. Finally. It's silly, but I love it."},
                 {"character":"Érica", "text":"...I think about leaving too, sometimes. Traveling. Maybe doing real journalism. But... I guess I'm not as brave as you were."},
@@ -59,7 +60,7 @@
         "next":"postman"
     },
     "postman":{
-        "characters":[{"key":"postman"}],
+        "characters":[{"key":"postman","face":"bobo"}],
         "order":["jcb","krowkaX3"],
         "money":200,
         "dialogues":{
@@ -76,7 +77,7 @@
             "click":[
                 {"character":"Postman","text":"...","options":[
                     {"text":"You're already back at work?", "required":true, "once":true, "response":[
-                        {"character":"Postman","text":"And you're already back in town, aren't you?"},
+                        {"character":"Postman","text":"And you're already back in town, aren't you?", "faces": {"postman":"bobo-eyes"},"facesAfter":{"postman":"bobo"}},
                         {"character":"Postman","text":"...Of course I'm back. A little \"mild head injury and mud exposure\" won't stop me or my bike.","options":[
                             {"text":"That's the spirit","response":[{"character":"Postman","text":"Glad you understand.", "onComplete":"bell"}]},
                             {"text":"I'd just lie in a ditch forever","point":"p","response":[{"character":"Postman","text":"Yeah, I used to feel like that. Then one day I decided I was a cat, and God gave me nine lives.", "onComplete":"bell"}]}
@@ -94,7 +95,7 @@
             "bell":[{ "character": "Postman", "text": "Lost the bell again, though. Shame. I liked that one.", "onComplete":"click" }],
             "wrong_items": [{ "character": "Postman", "text": "That's not mine." }],
             "wrong_items_jesuses": [{ "character": "Postman", "text": "JC. Blue packet." }],
-            "wrong_price": [{ "character": "Postman", "text": "It's 147." }],
+            "wrong_price": [{ "character": "Postman", "text": "It's 147.", "faces": {"postman":"bobo-eyes"},"facesAfter":{"postman":"bobo"} }],
             "checkout":[{"character":"Postman","text":"Thanks. Back to work. Would be nice not to meet the pavement today.", "onComplete":"scene_end"}],
             "after_decor_ordered":[
                 {"character":"Gail","text":"(Let's see what's in the parcel.)","options":[{"text":"Open","flag":"decor_received"}]}
@@ -241,7 +242,7 @@
             "wrong_price":[{"character":"{{mado}}","text":"Seriously?"}],
             "wrong_change":[{"character":"{{mado}}","text":"Seriously?"}],
             "checkout":[{"character":"{{mado}}","text":"Thanks.", "onComplete":"scene_end"}],
-            "checkout_morleys":[{"character":"{{mado}}","text":"Thanks. Also, could I...", "faces": {"mado":"side"}},{"character":"{{mado}}", "faces": {"mado":"side-blush20"},"text":"...No. Doesn't matter. Forget it.","onComplete":"scene_end"}]
+            "checkout_morleys":[{"character":"{{mado}}","text":"Thanks. Also, could I...", "faces": {"mado":"side"}},{"character":"{{mado}}", "faces": {"mado":"side-blush25"},"text":"...No. Doesn't matter. Forget it.","onComplete":"scene_end"}]
         },
         "next":"yvesd2"
     },
@@ -250,37 +251,37 @@
         "dialogues":{
             "entry":[
                 {"character":"Yves","text":"Good evening, {{name_yves}}. Mind if I hang around a bit? Waiting on Félix."},
-                {"character":"Yves","text":"He said he's got a plan. Which rarely end well, but they're never boring. Even told me to bring the trombone tonight."},
+                {"character":"Yves","text":"He said he's got a plan. Which rarely end well, but they're never boring. Even told me to bring the trombone tonight.", "faces": {"yves":"nosmile-browki"},"facesAfter":{"yves":null}},
                 {"character":"Yves","text":"Would never miss it.","onComplete":"root"}
             ],
             "root":[
                 {"character":"Yves","text":"...","options":[
-                    {"text":"How are organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.","onComplete":"root"}]},
+                    {"text":"How are organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.", "faces": {"yves":"browki"},"facesAfter":{"yves":null},"onComplete":"root"}]},
                     {"text":"You hear about the seal?","response":[{"character":"Yves","text":"Saw it. Smart beast. Lies around, gets fed. Does better than most of us.","onComplete":"root"}]},
                     {"text":"About organ's left panel...","if":"dots","response":[
                         {"character":"Gail","text":"Maybe there was something weird there?"},
                         {"character":"Gail","text":"(If that doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
-                        {"character":"Yves","text":"Hm... That side was much worse than the rest of the buffet. Pipes knocked out of place, some mold, bit of rot. But nothing too special. Old things fall apart funny sometimes."},
-                        {"character":"Yves","text":"...Strange thing to ask.","onComplete":"root"}
+                        {"character":"Yves","text":"Hm... That side was much worse than the rest of the buffet. Pipes knocked out of place, some mold, bit of rot. But nothing too special. Old things fall apart funny sometimes.", "faces": {"yves":"nosmile-browki"}},
+                        {"character":"Yves","text":"...Strange thing to ask.", "faces": {"yves":"nosmile"},"facesAfter":{"yves":null},"onComplete":"root"}
                     ]},
                     {"text":"About organ's bellows...","if":"bellows","flag":"bellows_asked","response":[
-                        {"character":"Gail","text":"(Alright. Let's pull that thread.)"},
+                        {"character":"Gail","text":"(Alright. Let's pull that thread.)", "faces": {"yves":"nosmile"}},
                         {"character":"Gail","text":"Couldn't it have been prevented? I heard bellows are often the first thing to go. Problematic part."},
-                        {"character":"Gail","text":"...Most irritating to check."},
+                        {"character":"Gail","text":"...Most irritating to check.", "faces": {"yves":"nosmile-browki"},"facesAfter":{"yves":null}},
                         {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? It wasn't only about bellows, the whole left half was a mess. Pipes knocked out of place, some mold, bit of rot. Keyboard too - half the keys loose, a few straight-up gone."},
-                        {"character":"Yves","text":"So... yeah. Whole thing was dying already."},
+                        {"character":"Yves","text":"So... yeah. Whole thing was dying already.", "faces": {"yves":"nosmile"}},
                         {"character":"Gail","text":"And you helped it die faster?"},
-                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports sent straight to the diocese. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed."},
-                        {"character":"Yves","text":"Eventually I stopped checking it properly. Just looked at the parts you could see without crawling in all the way. Figured if they didn't care, why should I?", "options":[
+                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports sent straight to the diocese. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed.", "faces": {"yves":"grr"}},
+                        {"character":"Yves","text":"Eventually I stopped checking it properly. Just looked at the parts you could see without crawling in all the way. Figured if they didn't care, why should I?", "faces": {"yves":"nosmile"}, "options":[
                             {"text":"So you cracked first, like a loser?", "point":"n"},
                             {"text":"All that ass and no squat", "point":"s"},
                             {"text":"Sometimes rot's the only answer...", "point":"p"},
                             {"text":"(Let silence do the work)"}
                         ]},
                         {"character":"Yves","text":"..."},
-                        {"character":"Yves","text":"Well. Maybe I could've done my job better."},
+                        {"character":"Yves","text":"Well. Maybe I could've done my job better.", "faces": {"yves":"nosmile-browki"},"facesAfter":{"yves":"nosmile"}},
                         {"character":"Yves","text":"...I'll take it off the repair cost. Not much, but fair's fair."},
-                        {"character":"Yves","text":"You can be really nasty, huh?","onComplete":"root"}
+                        {"character":"Yves","text":"You can be really nasty, huh?", "faces": {"yves":"browki"},"facesAfter":{"yves":null},"onComplete":"root"}
                     ]},
                     {"text":"(End conversation)", "ifnot":"dotsorbellowsasked","event":"scene_end"}
                 ]}
@@ -289,13 +290,13 @@
         "next":"felix2"
     },
     "felix2":{
-        "characters": [{"key":"yves","x":228},{"key":"felix","x":500}],
+        "characters": [{"key":"yves","x":228},{"key":"felix","x":500,"face":"heh"}],
         "dialogues":{
             "entry":[
                 {"character":"Félix","text":"Evening, sunshines."},
                 {"character":"Gail","text":"Took you long enough."},
-                {"character":"Félix","text":"Time is fake. Anyway, you closing?"},
-                {"character":"Yves","text":"Closing sounds good."},
+                {"character":"Félix","text":"Time is fake. Anyway, you closing?", "faces": {"felix":"heh-eyes"}},
+                {"character":"Yves","text":"Closing sounds good.", "faces": {"yves":"browki","felix":"heh"}},
                 {"character":"Gail","text":"Yeah. Closing sounds good."},
                 {"character":"Félix","text":"Perfect. Grab the key. Pretend we're a real business.","onComplete":"day_end"}
             ]            

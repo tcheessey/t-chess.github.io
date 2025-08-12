@@ -13,21 +13,21 @@
                 { "text": "[To ring up the total, enter the price on the register, then drag the lever down.]" },
                 { "text": "[Count the customer's money, then click on the right banknotes and coins to give them their change.]" },
                 { "text": "[Click on the ? button to talk to the customer and/or ask them to remind or explain their order.]" },
-                { "character": "Félix", "text": "Let's try it out. Sell me matches and a tin of Morley.", "faces": {"felix":"heh"},"facesAfter":{"felix":null}}
+                { "character": "Félix", "text": "Let's try it out. Sell me matches and a tin of Morley.", "faces": {"felix":"smile"},"facesAfter":{"felix":null}}
             ],
             "wrong_items": [{ "character": "Félix", "text": "That's not what I asked for. Try again.", "flag":"st1", "onComplete":"click" }],
             "wrong_price": [{ "character": "Félix", "text": "Right stuff, wrong number. Do the math again.", "flag":"st1" }],
             "click":[{ "character": "Félix", "text": "A tin of Morley tobacco. A box of matches. In the bag, on the register, then the lever."}],
             "paying":[{ "character": "Félix", "text": "Here's 300. Let's see if you can count."},{"character":"Gail","text":"(Rude. I'll think about giving you your full change.)"}],
-            "wrong_change_under":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.","point":"n","flag":"shortchanging","faces":{"felix":"heh-eyes"},"facesAfter":{"felix":null},"options":[
+            "wrong_change_under":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.","point":"n","flag":"shortchanging","faces":{"felix":"smile-brows"},"facesAfter":{"felix":null},"options":[
                 {"text":"Yet...","point":"n","response":[{"character":"Félix","text":"Ha. That's the spirit. I like it."}]},
                 {"text":"Oopsie doopsie","point":"s","response":[{"character":"Félix","text":"Oopsie doopsie indeed."}]},
                 {"text":"..."}
             ]}],
             "wrong_change_under_shortchanging":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet."}],
             "wrong_change_over":[{ "character": "Félix", "text": "You're being generous. That's too much."}],
-            "checkout":[{ "character": "Félix", "text": "See? Easy enough. Now let's try one more time.", "faces": {"felix":"heh"},"onComplete":"scene_end"}],
-            "checkout_st1":[{ "character": "Félix", "text": "Okay, you figured it out, eventually. Let's try again.","faces":{"felix":"eyes"},"onComplete":"scene_end"}]
+            "checkout":[{ "character": "Félix", "text": "See? Easy enough. Now let's try one more time.", "faces": {"felix":"smile"},"onComplete":"scene_end"}],
+            "checkout_st1":[{ "character": "Félix", "text": "Okay, you figured it out, eventually. Let's try again.","faces":{"felix":"side"},"onComplete":"scene_end"}]
         },
         "next": "st2" 
     },
@@ -41,15 +41,15 @@
             "wrong_items_st1": [{ "character": "Félix", "text": "That's not what I asked for. Again.", "faces": {"felix":"grr"},"facesAfter":{"felix":null} }],
             "click":[
                 { "character": "Félix", "text": "...", "options": [
-                    { "text": "This place wasn't a tobacconist before","required":true,"response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot."},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.","onComplete":"click"}] },
+                    { "text": "This place wasn't a tobacconist before","required":true,"response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot.", "faces": {"felix":"smile-brows"}},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.", "faces": {"felix":"side-brows"},"facesAfter":{"felix":null},"onComplete":"click"}] },
                     { "text": "Did you know my mom?","once":true, "required":true,"response": [{ "character": "Félix", "text": "Not well. By the time I came back, she had already... found God. Poor guy." }, {"character": "Félix","text":"Spent most of her time between the church and the hospital, I guess. Didn't see her here much."}, { "character": "Félix", "text": "Honestly surprised she didn't sell the place and hand it to the church.", "options":[
                         { "text": "She probably meant to","point":"p","response":[{"character":"Félix","text":"Or maybe you just need her to be the villain. Easier that way.", "onComplete":"click"}]},
                         { "text": "Well, good for me","point":"n","response":[{"character":"Félix","text":"Praise be to private property.", "onComplete":"click"}]}] }] },
-                    { "text": "What was it you asked for?","response":[{"character": "Félix", "text":"What, riddle too hard? It's just a newspaper and two packs of rolling papers.", "faces": {"felix":"heh"},"facesAfter":{"felix":null},"onComplete":"click"}]},
+                    { "text": "What was it you asked for?","response":[{"character": "Félix", "text":"What, riddle too hard? It's just a newspaper and two packs of rolling papers.", "faces": {"felix":"smile-brows"},"facesAfter":{"felix":null},"onComplete":"click"}]},
                     { "text": "..." }
                 ]}
             ],
-            "wrong_price": [{ "character": "Félix", "text": "Want to double-check before I call the math police?", "faces": {"felix":"heh"},"facesAfter":{"felix":null} }],
+            "wrong_price": [{ "character": "Félix", "text": "Want to double-check before I call the math police?", "faces": {"felix":"smile-brows"},"facesAfter":{"felix":null} }],
             "checkout":[
                 { "character": "Félix", "text": "Well done. That's the job - sit here, sell people their little habits, read the paper if you want, and don't let the register jam. If it does, hit it."},
                 { "character": "Félix", "text": "...Some people come in more for the conversation than the cigarettes. Whether you listen or not is up to you." },
@@ -92,43 +92,44 @@
         "money":180,
         "dialogues": {
             "entry":[
-                { "character": "Jean-Noël", "text": "...And so the daughter returns home. To the dust her mother called holy, and the stillness she mistook for peace." },
-                { "character": "Jean-Noël", "text": "Step careful - they wait to see what you'll do differently.", "options": [
+                { "character": "Jean-Noël", "text": "...And so the daughter returns home. To the dust her mother called holy, and the stillness she mistook for peace.", "faces": {"jeannoel":"closed"} },
+                { "character": "Jean-Noël", "text": "Step careful - they wait to see what you'll do differently.", "faces": {"jeannoel":null}, "options": [
                     { "text": "Hello to you too"},
                     { "text": "God bless, Father","point":"s"},
-                    { "text": "Why even bother?","point":"p", "response": [{ "character": "Jean-Noël", "text": "To see what happens, maybe." }]},
-                    { "text": "...","point":"n", "response": [{ "character": "Jean-Noël", "text": "Silence is God's first language." }]}
+                    { "text": "Why even bother?","point":"p", "response": [{ "character": "Jean-Noël", "text": "To see what happens, maybe.", "faces": {"jeannoel":"smile"} }]},
+                    { "text": "...","point":"n", "response": [{ "character": "Jean-Noël", "text": "Silence is God's first language.", "faces": {"jeannoel":"closed"} }]}
                 ]},
-                { "character": "Jean-Noël", "text": "Mmm..." },
+                { "character": "Jean-Noël", "text": "Mmm...", "faces": {"jeannoel":null} },
                 { "character": "Jean-Noël", "text": "The latest paper and Fleuries, please. The mugwort blend, if the Lord still provides." }
             ],
             "click":[
                 { "character": "Jean-Noël", "text": "♪ Mmm-hm-mmmmm ♪", "options": [
-                    { "text": "What happened to the organ?", "required":true, "response":[{"character": "Jean-Noël", "text":"Organs are dramatic things. Full of held breath and pressure... too much of it, and even sacred things crack."},{"character": "Jean-Noël", "text":"Thank God our good old repairman gets along with anything that's fallen out of tune.","onComplete":"organ"}] },
+                    { "text": "What happened to the organ?", "required":true, "response":[{"character": "Jean-Noël", "text":"Organs are dramatic things. Full of held breath and pressure... too much of it, and even sacred things crack.", "faces": {"jeannoel":"closed"}},{"character": "Jean-Noël", "text":"Thank God our good old repairman gets along with anything that's fallen out of tune.","onComplete":"organ"}] },
                     { "text": "What did your funeral speech mean?","response":[{"character":"Gail","text":"(какое-то описание че он там буровил я не придумала, просто filler text)"},{"character": "Jean-Noël", "text":"We build meaning like churches - beautiful, hollow, echoing the absence they were built around."},{"character": "Jean-Noël", "text":"...What's missing is what makes it sacred. That's how eulogies work."},{"character": "Jean-Noël", "text":"Your mom knew that better than anyone."},{"character": "Gail", "text":"Yeah. Got so enlightened her heart checked out."}, {"character": "Jean-Noël", "text":"Well, some prayers answer themselves.","onComplete":"click"}] },
                     { "text": "Which holy blend are we burning today?", "response":[{"character": "Jean-Noël", "text":"Mugwort Fleuries. And the news. Let it be so.","onComplete":"click"}] },
                     { "text": "..."}
                 ]}
             ],
             "organ": [
-                {"character": "Jean-Noël", "text":"The organ is already in his care.", "options":[
-                    {"text":"Sounds like it had a breakdown", "response":[{"character":"Jean-Noël","text":"Like we all do. Nothing unholy about that.","onComplete":"organ"}] },
+                {"character": "Jean-Noël", "text":"The organ is already in his care.", "faces": {"jeannoel":null}, "options":[
+                    {"text":"Sounds like it had a breakdown", "response":[{"character":"Jean-Noël","text":"Like we all do. Nothing unholy about that.", "faces": {"jeannoel":"smile"}, "facesAfter":{"jeannoel":null},"onComplete":"organ"}] },
                     {"text":"Who's the repairman?", "response":[{"character":"Jean-Noël","text":"Who else but Yves? Luckily still with help from Pierrick, hanging on beside him..."},{"character":"Gail","text":"(I've probably heard of them before. Or maybe just feels like I have. This town's too small.)","onComplete":"organ"}] },
                     {"text":"Any plans for a temporary fix?", "event":"toFix", "once":true },
                     {"text":"...","event":"click"}
                 ]}
             ],
-            "toFix": [{"character":"Jean-Noël","text":"You think it can't just be quiet for a while? Yesterday there were no chords, and yet... people still prayed.","options":[
+            "toFix": [{"character":"Jean-Noël","text":"You think it can't just be quiet for a while? Yesterday there were no chords, and yet... people still prayed.", "faces": {"jeannoel":"browki-smile"}, "facesAfter":{"jeannoel":null},"options":[
                 {"text":"A bit of soundtrack never hurts", "flag":"silenceno","response":[{"character": "Jean-Noël", "text":"That's true. Heaven never minded a little background music.","onComplete":"organ"}]},
                 {"text":"Sometimes silence says enough", "flag":"silenceyes","response":[{"character": "Jean-Noël", "text":"Exactly. We pray hardest through broken things.","onComplete":"organ"}]}
             ]}],
-            "wrong_items": [{ "character": "Jean-Noël", "text": "We all reach for the wrong thing sometimes." }],
-            "checkout":[{ "character": "Jean-Noël", "text": "Much obliged." },{ "character": "Jean-Noël", "text": "Funny thing - I'd usually ask someone else to pick these up for me. Then he quit smoking, and I lost my excuse to avoid the walk." },{ "character": "Jean-Noël", "text": "But today it brought me to you, so I'm calling it a good walk." },{ "character": "Jean-Noël", "text": "No more words from me. Be strong and of good courage.","onComplete":"scene_end" }]
+            "wrong_items": [{ "character": "Jean-Noël", "text": "We all reach for the wrong thing sometimes.", "faces": {"jeannoel":"closed"}, "facesAfter":{"jeannoel":null} }],
+            "checkout":[{ "character": "Jean-Noël", "text": "Much obliged." },{ "character": "Jean-Noël", "text": "Funny thing - I'd usually ask someone else to pick these up for me. Then he quit smoking, and I lost my excuse to avoid the walk." },{ "character": "Jean-Noël", "text": "But today it brought me to you, so I'm calling it a good walk.", "faces": {"jeannoel":"smile"}, "facesAfter":{"jeannoel":"smile-closed"} },{ "character": "Jean-Noël", "text": "No more words from me. Be strong and of good courage.","onComplete":"scene_end" }]
         },
         "next": "nuns",
         "break":[
             {"text":"..."},
-            {"character":"Gail","text":"(Nobody here.)"}
+            {"text":"..."},
+            {"character":"Gail","text":"(Guess nobody's coming. Break time.)"}
         ]
     },
     "nuns": {
@@ -137,20 +138,20 @@
         "money":200,
         "dialogues":{
             "entry":[
-                { "character": "Nun", "text": "Alright, Babette. What are we in the mood for today?" },
+                { "character": "Nun", "text": "Alright, Babette. What are we in the mood for today?"},
                 { "character": "Babette", "text": "Mm... the pretty Fleuries with the rose petals?" },
                 { "character": "Nun", "text": "Tempting. But we just spent two hours scraping wax off pews. I think we deserve a little sin." },
-                { "character": "Babette", "text": "You're thinking what I'm thinking, aren't you?" },
-                { "character": "Nun", "text": "..." },
+                { "character": "Babette", "text": "You're thinking what I'm thinking, aren't you?", "faces": {"babette":"side"} },
+                { "character": "Nun", "text": "...", "faces": {"lucie":"side","babette":"side"}, "facesAfter":{"lucie":null,"babette":null}  },
                 { "character": "Babette", "text": "One cigar, please. We've earned it." }
             ],
             "click": [
-                { "character": "Nun", "text": "...they've got it all draped up like a dead body.","flag":"nunsclicked" },
-                { "character": "Babette", "text": "Don't say that, Lucie. I'll be very sad if our dear organ's really gone for good." },
+                { "character": "Nun", "text": "...they've got it all draped up like a dead body.", "faces": {"lucie":"sad-side"},"flag":"nunsclicked" },
+                { "character": "Babette", "text": "Don't say that, Lucie. I'll be very sad if our dear organ's really gone for good.", "faces": {"lucie":"sad-side","babette":"side-brow-nosmile"} },
                 { "character": "Lucie", "text": "I saw the music fellas in there earlier. They'd already pulled out some pipes." },
                 { "character": "Babette", "text": "Oh, so they already let Noose Boy out?" },
-                { "character": "Lucie", "text": "Babette." },
-                { "character": "Babette", "text": "I'm just saying. He's sweet, but he looks like he'd pass out halfway through a rosary.", "onComplete":"click" }
+                { "character": "Lucie", "text": "Babette.", "faces": {"lucie":"wtf-side"} },
+                { "character": "Babette", "text": "I'm just saying. He's sweet, but he looks like he'd pass out halfway through a rosary.", "faces": {"lucie":"wtf-side","babette":"closed"}, "facesAfter":{"lucie":null,"babette":null} , "onComplete":"click" }
             ],
             "click_nunsclicked":[
                 {"text":"...","options":[
@@ -161,8 +162,8 @@
             "wrong_items": [{ "character": "Babette", "text": "Try again. We're picky sinners." }],
             "wrong_price": [{"character":"Lucie", "text":"Hmm. That's not what it cost last time."}],
             "checkout" : [{ "character": "Lucie", "text": "Thank you, dear. We'll take this, say our evening prayer and sit under the sky a bit. Let the day settle. And hopefully no one smells temptation and gets nervous...", "onComplete":"chckt"}],
-            "chckt":[{"character": "Babette", "text": "Yeah. I'd rather not fall apart mid-prayer like that poor organ.","options": [
-                    { "text": "What's that supposed to mean?", "response": [{ "character": "Babette", "text": "Oh... Forget it, dear. Just a bad joke." },{ "character": "Gail", "text": "(Of course. Gossip first, guilt later.)","onComplete":"chckt" }]},
+            "chckt":[{"character": "Babette", "text": "Yeah. I'd rather not fall apart mid-prayer like that poor organ.", "faces": {"babette":"closed"},"options": [
+                    { "text": "What's that supposed to mean?", "response": [{ "character": "Babette", "text": "Oh... Forget it, dear. Just a bad joke.", "faces": {"babette":"brow-side"}, "facesAfter":{"babette":null} },{ "character": "Gail", "text": "(Of course. Gossip first, guilt later.)","onComplete":"chckt" }]},
                     { "text": "What will you pray for?", "response": [{ "character": "Babette", "text": "Hmm. Patience. And patients." },{ "character": "Lucie", "text": "And maybe a bit of forgiveness. Just in case.","onComplete":"chckt" }]},
                     { "text": "Have a quiet evening, sisters", "response": [{ "character": "Lucie", "text": "Blessings, dear.","onComplete":"scene_end"}]}
                 ]}
@@ -171,22 +172,22 @@
         "next":"yves"
     },
     "yves":{
-        "characters":[{"key":"yves"}],
+        "characters":[{"key":"yves","face":"nosmile"}],
         "order":["papirky","matches"],
         "money":27,
         "dialogues":{
             "entry":[
                 {"character":"Old Man", "text":"Interesting. You're definitely not Félix, unless he got prettier."},
                 {"character":"Old Man", "text":"He died, lucky bastard? Probably no, just playing hide and seek again. "},
-                {"character":"Old Man", "text":"Anyway, my name is Yves. I fix things. Instruments, mostly."},
+                {"character":"Old Man", "text":"Anyway, my name is Yves. I fix things. Instruments, mostly.", "faces": {"yves":null}},
                 {"character":"Yves", "text":"And you are?..", "options":[
-                    {"text":"Abigaïl", "response":[{"character":"Yves","text":"Oof, my wife says never trust someone whose name has funny letters in it. But maybe I should give you a chance."}],"flag":"yves_abigail"},
+                    {"text":"Abigaïl", "response":[{"character":"Yves","text":"Oof, my wife says never trust someone whose name has funny letters in it. But maybe I should give you a chance.", "faces": {"yves":"browki"}}],"flag":"yves_abigail"},
                     {"text":"Just Gail", "response":[{"character":"Yves","text":"Nice to meet you, Just Gail."}], "flag":"yves_gail"},
-                    {"text":"Fish, short for Félicia", "point":"s", "response":[{"character":"Yves","text":"Sweet. I can already hear Félix cackling."}],"flag":"yves_fish" }
+                    {"text":"Fish, short for Félicia", "point":"s", "response":[{"character":"Yves","text":"Sweet. I can already hear Félix cackling.", "faces": {"yves":"browki"}}],"flag":"yves_fish" }
                 ]},
-                {"character":"Yves", "text":"Well, normally I'd be here for pipe tobacco. But I quit."},
+                {"character":"Yves", "text":"Well, normally I'd be here for pipe tobacco. But I quit.", "faces": {"yves":"nosmile"}},
                 {"character":"Yves","text": "So nothing for me today... or maybe the news? No. No, I don't want to know what's going on."},
-                {"character":"Yves", "text":"Hmm."},
+                {"character":"Yves", "text":"Hmm.", "facesAfter":{"yves":null}},
                 {"character":"Yves", "text":"I'll take those tiny papers you roll cigarettes with. And a box of matches. Just in case."}
             ],
             "click":[
@@ -197,11 +198,11 @@
                             { "text": "Could it have been prevented?" },
                             { "text": "Did anything stand out?" }
                         ]},
-                        {"character":"Yves","text":"Oof, I've had enough of the work talk for today, {{name_yves}}, and it's only Monday. Mind if we change the subject?", "onComplete":"click"}
+                        {"character":"Yves","text":"Oof, I've had enough of the work talk for today, {{name_yves}}, and it's only Monday. Mind if we change the subject?", "faces": {"yves":"nosmile"}, "facesAfter":{"yves":null}, "onComplete":"click"}
                     ]},
                     {"text":"So, no more pipe?", "required":true,"response":[
-                        {"character": "Yves","text": "Nope. I quit last month."},
-                        {"character": "Yves","text": "Guy from the brass quartet said smoke messes with your diaphragm. Makes it harder to hold a note."},
+                        {"character": "Yves","text": "Nope. I quit last month.", "faces": {"yves":"nosmile"}},
+                        {"character": "Yves","text": "Guy from the brass quartet said smoke messes with your diaphragm. Makes it harder to hold a note.", "facesAfter":{"yves":null}},
                         {"character": "Yves","text": "Can't have that. I've got solos to play.", "onComplete":"pipe"}
                     ]},
                     {"text":"Can you repeat your order?","response":[{"character":"Yves","text":"Tiny cigarette papers and matches.", "onComplete":"click"}]},
@@ -213,8 +214,8 @@
                     {"text":"You were a smoker for how long?", "response":[{"character":"Yves","text":"Long enough to forget when I started.", "onComplete":"pipe"}]},
                     {"text":"And what's your method?","response":[{"character":"Yves","text":"I let a nun stick needles in my ears twice a week. Helps with urges. ", "onComplete":"pipe"}]},
                     {"text":"What instruments do you play?","response":[
-                        {"character":"Yves","text":"Hmm, let's see..."},
-                        {"character":"Yves","text":"Cornet when I'm feeling gentle. Trombone when I'm not. Clarinet... maybe when I don't quite feel like being myself."},
+                        {"character":"Yves","text":"Hmm, let's see...", "faces": {"yves":"nosmile"}},
+                        {"character":"Yves","text":"Cornet when I'm feeling gentle. Trombone when I'm not. Clarinet... maybe when I don't quite feel like being myself.", "facesAfter":{"yves":null}},
                         {"character":"Yves","text":"Suppose if it takes lungs to play, chances are I've tried it.", "onComplete":"pipe"}
                     ]},
                     {"text":"...","event":"click"}
@@ -222,8 +223,9 @@
             ],
             "wrong_items":[{ "character": "Yves", "text": "Creative interpretation, {{name_yves}}, but I asked for something else."}],
             "wrong_price":[{"character":"Yves","text":"Off by a few notes. You might want to tune that register."}],
-            "wrong_price_yves_abigail":[{"character":"Yves","text":"So my wife was right about you people with funny letters?", "onComplete":"click"}],
-            "wrong_change":[{ "character": "Yves", "text": "Don't complicate it.", "point":"s"}],
+            "wrong_price_yves_abigail":[{"character":"Yves","text":"So my wife was right about you people with funny letters?", "faces": {"yves":"nosmile-browki"}, "facesAfter":{"yves":null}, "onComplete":"click"}],
+            "wrong_change":[{ "character": "Yves", "text": "Don't complicate it.", "flag":"complicate","point":"s"}],
+            "wrong_change_complicate":[{ "character": "Yves", "text": "Don't complicate it."}],
             "checkout":[
                 {"character":"Gail","text":"Didn't you say you quit? What's with the papers?"},
                 {"character":"Yves","text":"Oh, I just like having them on hand."},
@@ -243,14 +245,14 @@
         "order":["morleyb"],
         "money":200,
         "dialogues":{
-            "entry":[{ "character": "Beret Girl", "text": "...You're not Félix." },{"character":"Beret Girl","text":"Nevermind. Hi. Menthol Morleys, please."}],
-            "click":[{"character":"Beret Girl","text":"...Can you be faster, please?", "options":[
-                {"text":"Hm? Menthol what?", "point":"n", "response":[{"character":"Gail","text":"(Not deaf. Just petty.)"},{"character":"Beret Girl","text":"Menthol Morleys. I did say it. Clearly.", "faces": {"mado":"grr"},"facesAfter":{"mado":null}}]},
+            "entry":[{ "character": "Beret Girl", "text": "...You're not Félix." },{"character":"Beret Girl","text":"Nevermind. Hi. Menthol Morleys, please.", "faces": {"mado":"side2"}, "facesAfter":{"mado":null}}],
+            "click":[{"character":"Beret Girl","text":"...Can you be faster, please?", "faces": {"mado":"mde-browki"}, "facesAfter":{"mado":null}, "options":[
+                {"text":"Hm? Menthol what?", "point":"n", "response":[{"character":"Gail","text":"(Not deaf. Just petty.)"},{"character":"Beret Girl","text":"Menthol Morleys. I did say it. Clearly.", "faces": {"mado":"mde-browki-eyes"},"facesAfter":{"mado":null}}]},
                 {"text":"..."}
             ]}],
-            "wrong_items":[{"character":"Beret Girl","text":"I asked for Menthol Morleys. Not... whatever that is."}],
-            "wrong_price":[{"character":"Beret Girl","text":"It can't be that hard.", "faces": {"mado":"grr"},"facesAfter":{"mado":null}}],
-            "wrong_change":[{"character":"Beret Girl","text":"That's wrong."}],
+            "wrong_items":[{"character":"Beret Girl", "faces": {"mado":"mde-browki"}, "facesAfter":{"mado":null},"text":"I asked for Menthol Morleys. Not... whatever that is."}],
+            "wrong_price":[{"character":"Beret Girl","text":"It can't be that hard.", "faces": {"mado":"mde-browki-eyes"},"facesAfter":{"mado":null}}],
+            "wrong_change":[{"character":"Beret Girl","text":"That's wrong.", "faces": {"mado":"mde-eyes"}, "facesAfter":{"mado":null}}],
             "checkout":[{"character":"Beret Girl","text":"Thanks.", "onComplete":"scene_end"}]
         },
         "next":"felix"
@@ -261,7 +263,7 @@
             "entry":[
                 {"character": "Félix", "text": "Surprise. I exist again."},
                 {"character": "Gail", "text": "Jesus. I thought you'd be back in an hour. Maybe two. I worked your whole damn shift."},
-                {"character": "Félix", "text": "See? Knew you were born for this. Natural cashier."},
+                {"character": "Félix", "text": "See? Knew you were born for this. Natural cashier.", "faces": {"felix":"smile-eyes"}, "facesAfter":{"felix":"smile"}},
                 {"character": "Félix", "text": "Anyway. That's enough heroics for today. Here's your cut for the shift. Key's under the counter. Let's close up.","onComplete":"day_end"}
             ]
         }
