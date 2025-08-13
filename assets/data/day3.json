@@ -61,76 +61,76 @@
             "checkout":[{"character":"Jean-Noël","text":"Thank you, child. Off to see if the seal's taken over the parish yet.", "onComplete":"scene_end"}],
             "after":[{ "character": "Gail", "text": "(...Seal?)", "onComplete":"next_scene" }]
         },
-        "next":"erica"
+        "next":"erika"
     },
-    "ericad3":{
-        "characters": [{"key":"erica"}],
+    "erikad3":{
+        "characters": [{"key":"erika"}],
         "order":["morleyr"],
         "money":500,
         "dialogues": {
             "entry":[
-                {"character":"Érica","text":"Good morning, my cigarette princess! Do you have a moment to talk about our Lord and Savior Sealsus Sealst?"},
-                {"character":"Érica","text":"...Sorry that sounded better in my head. Anyway, isnt it wonderful?"},
+                {"character":"Erika","text":"Good morning, my cigarette princess! (хуевая тюленья шутка)"},
+                {"character":"Erika","text":"...Sorry that sounded better in my head. Anyway, isnt it wonderful?"},
                 {"character":"Gail","text":"..."},
-                {"character":"Érica","text":"What? Oh, don't tell me you haven't read the news. Are you living under a rock?"},
-                {"character":"Érica","text":"Remember that seal I told you about on Friday?","options":[
+                {"character":"Erika","text":"What? Oh, don't tell me you haven't read the news. Are you living under a rock?"},
+                {"character":"Erika","text":"Remember that seal I told you about on Friday?","options":[
                     {"text":"Yep"},
-                    {"text":"Not really","response":[{"character":"Érica","text":"Gail... The seal. The little blob that showed up near the soup truck and just... sat there?"}]}
+                    {"text":"Not really","response":[{"character":"Erika","text":"Gail... The seal. The little blob that showed up near the soup truck and just... sat there?"}]}
                 ]},
-                {"character":"Érica","text":"It's still here! It's been hanging around all weekend, and I literally just saw it flopping by the church on my way here."},
-                {"character":"Érica","text":"Seriously, promise me you'll read the paper when I leave. I'm basically the entire editorial team at this point, so, you know... give it some love."},
-                {"character":"Érica","text":"Oh, and a pack of red Morleys, please.","onComplete":"click"}
+                {"character":"Erika","text":"It's still here! It's been hanging around all weekend, and I literally just saw it flopping by the church on my way here."},
+                {"character":"Erika","text":"Seriously, promise me you'll read the paper when I leave. I'm basically the entire editorial team at this point, so, you know... give it some love."},
+                {"character":"Erika","text":"Oh, and a pack of red Morleys, please.","onComplete":"click"}
             ],
             "click":[
-                {"character":"Érica","text":"...","options":[
+                {"character":"Erika","text":"...","options":[
                     {"text":"What does the seal do?", "response":[
-                        {"character":"Érica","text":"Nothing. It just sort of... lies there. Waddles around sometimes. Sleeps a lot."},
-                        {"character":"Érica","text":"People keep stopping to stare at it, though. Like it's going to get up and... I don't know, do something big?"},
-                        {"character":"Érica","text":"But for now, it just lies there. Seems perfectly content with itself.","onComplete":"click"}
+                        {"character":"Erika","text":"Nothing. It just sort of... lies there. Waddles around sometimes. Sleeps a lot."},
+                        {"character":"Erika","text":"People keep stopping to stare at it, though. Like it's going to get up and... I don't know, do something big?"},
+                        {"character":"Erika","text":"But for now, it just lies there. Seems perfectly content with itself.","onComplete":"click"}
                     ]},
                     {"text":"You started smoking?","response":[
-                        {"character":"Érica","text":"Nope, these are for my mom. Sadly."},
-                        {"character":"Érica","text":"But... I mean, I've been thinking about it. I love the idea of it - the little rituals and quiet pauses between words and the way people lean in closer just because of a cigarette."},
-                        {"character":"Érica","text":"Drifting smoke and cigarette holders... Super chic."},
-                        {"character":"Érica", "text": "I keep telling myself I'll start, like, next week or whatever... I even plan it out sometimes - the perfect moment, the perfect lighter. And then... I just don't. Every time.", "options":[
-                            {"text":"Smoking's cool as hell","response":[{"character":"Érica","text":"See? You get it. So when I finally light up, my first cigarette has to be with you.","onComplete":"click"}]},
-                            {"text":"Not worth the mess it brings","response":[{"character":"Érica","text":"You're no fun. But you're probably right.","onComplete":"click"}]}
+                        {"character":"Erika","text":"Nope, these are for my mom. Sadly."},
+                        {"character":"Erika","text":"But... I mean, I've been thinking about it. I love the idea of it - the little rituals and quiet pauses between words and the way people lean in closer just because of a cigarette."},
+                        {"character":"Erika","text":"Drifting smoke and cigarette holders... Super chic."},
+                        {"character":"Erika", "text": "I keep telling myself I'll start, like, next week or whatever... I even plan it out sometimes - the perfect moment, the perfect lighter. And then... I just don't. Every time.", "options":[
+                            {"text":"Smoking's cool as hell","response":[{"character":"Erika","text":"See? You get it. So when I finally light up, my first cigarette has to be with you.","onComplete":"click"}]},
+                            {"text":"Not worth the mess it brings","response":[{"character":"Erika","text":"You're no fun. But you're probably right.","onComplete":"click"}]}
                         ]}
                     ]},
                     {"text":"What was behind organ's left panel?","if":"dots","flag":"dots_asked","response":[
-                        {"character":"Érica","text":"...Oh. So you found that."},
-                        {"character":"Érica","text":"Okay, look... Before you say anything - I swear I was super careful. But you know how it is... You start examining small weird cracks and suddenly you're halfway inside a giant antique instrument."},
-                        {"character":"Érica","text":"I found that weird puzzle in a huge pile of letters and thought it might be some secret message, hidden confession or, I don't know, a cursed artifact or something. It just felt so... important.","onComplete":"organ"}
+                        {"character":"Erika","text":"...Oh. So you found that."},
+                        {"character":"Erika","text":"Okay, look... Before you say anything - I swear I was super careful. But you know how it is... You start examining small weird cracks and suddenly you're halfway inside a giant antique instrument."},
+                        {"character":"Erika","text":"I found that weird puzzle in a huge pile of letters and thought it might be some secret message, hidden confession or, I don't know, a cursed artifact or something. It just felt so... important.","onComplete":"organ"}
                     ]},
-                    {"text":"Can you repeat your order, miss?","response":[{"character":"Érica","text":"Red Morleys, please."}]},
+                    {"text":"Can you repeat your order, miss?","response":[{"character":"Erika","text":"Red Morleys, please."}]},
                     {"text":"..."}
                 ]}
             ],
             "organ":[
-                {"character":"Érica","text":"Ugh...","options":[
+                {"character":"Erika","text":"Ugh...","options":[
                     {"text":"What did you find?","response":[
-                        {"character":"Érica","text":"A lot of scribbled notes, marbles, dead moth in a matchbox... even a half-full tin of condensed milk. A whole hidden world stuffed behind that panel."},
-                        {"character":"Érica","text":"I think the local kids were using it as their secret mailbox. And maybe also a bit of a rubbish bin..."},
-                        {"character":"Érica","text":"It's kind of adorable. But yeah, no ancient mysteries or secret artifacts."}
+                        {"character":"Erika","text":"A lot of scribbled notes, marbles, dead moth in a matchbox... even a half-full tin of condensed milk. A whole hidden world stuffed behind that panel."},
+                        {"character":"Erika","text":"I think the local kids were using it as their secret mailbox. And maybe also a bit of a rubbish bin..."},
+                        {"character":"Erika","text":"It's kind of adorable. But yeah, no ancient mysteries or secret artifacts."}
                     ]},
                     {"text":"What happened to the organ?","response":[
-                        {"character":"Érica","text":"Well... there is a tiny chance that I knocked something loose. A pipe or... tube? Some old metal thing. It made a really sad dying sound."},
-                        {"character":"Érica","text":"I panicked, obviously. But I tried to put everything back how I found it... Ish. I mean, it still played at the next mass, so I convinced myself it was fine."},
-                        {"character":"Érica","text":"Also... let's be real, all that junk the kids were cramming in there did more damage anyway. Probably. So, you know, I'm not the only one to blame...","onComplete":"organ"}
+                        {"character":"Erika","text":"Well... there is a tiny chance that I knocked something loose. A pipe or... tube? Some old metal thing. It made a really sad dying sound."},
+                        {"character":"Erika","text":"I panicked, obviously. But I tried to put everything back how I found it... Ish. I mean, it still played at the next mass, so I convinced myself it was fine."},
+                        {"character":"Erika","text":"Also... let's be real, all that junk the kids were cramming in there did more damage anyway. Probably. So, you know, I'm not the only one to blame...","onComplete":"organ"}
                     ]},
                     {"text":"..."}
                 ]},
-                {"character":"Érica","text":"...That's not great, isn't it?"},
-                {"character":"Érica","text":"..."},
-                {"character":"Érica","text":"I'll... sort something out. Make up for it somehow.","onComplete":"click"}
+                {"character":"Erika","text":"...That's not great, isn't it?"},
+                {"character":"Erika","text":"..."},
+                {"character":"Erika","text":"I'll... sort something out. Make up for it somehow.","onComplete":"click"}
             ],
-            "wrong_items":[{"character":"Érica", "text": "My mom smokes red Morleys, remember?"}],
-            "checkout":[{"character":"Érica","text":"Thanks. Don't forget to read the paper, I worked hard on it!", "onComplete":"scene_end"}],
+            "wrong_items":[{"character":"Erika", "text": "My mom smokes red Morleys, remember?"}],
+            "checkout":[{"character":"Erika","text":"Thanks. Don't forget to read the paper, I worked hard on it!", "onComplete":"scene_end"}],
             "checkout_dots_asked":[
-                {"character":"Érica","text":"Thanks."},
-                {"character":"Érica","text":"Oh, wait. Since you're a little detective now, here's a new riddle for you. Some cute seal-themed wordoku from an older sunday paper issue. I remember you've always been obssesed with sudokus."},
+                {"character":"Erika","text":"Thanks."},
+                {"character":"Erika","text":"Oh, wait. Since you're a little detective now, here's a new riddle for you. Some cute seal-themed wordoku from an older sunday paper issue. I remember you've always been obssesed with sudokus."},
                 {"character":"Gail","text":"(Man I love sudokus.)"},
-                {"character":"Érica","text":"And don't forget to read the paper, I worked hard on it!", "onComplete":"scene_end"}
+                {"character":"Erika","text":"And don't forget to read the paper, I worked hard on it!", "onComplete":"scene_end"}
             ]
         },
         "break":[{"character":"Gail", "text": "(Well. Let's see what's in the paper?)"}],
@@ -303,7 +303,7 @@
                 {"text":"Lispy Kid","flag":"toothto_lispy","event":"after2"},
                 {"text":"(next page)","response":[{"text":"To whom?","options":[
                     {"text":"Tragic Face","flag":"toothto_pierrick","event":"after2"},
-                    {"text":"Érica","flag":"toothto_erica","event":"after2"},
+                    {"text":"Erika","flag":"toothto_erika","event":"after2"},
                     {"text":"Postman","flag":"toothto_postman","event":"after2"},
                     {"text":"Lucie & Babette","flag":"toothto_nuns","event":"after2"},
                     {"text":"(previous page)","event":"whom"},

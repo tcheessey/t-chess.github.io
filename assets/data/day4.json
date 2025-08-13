@@ -94,39 +94,39 @@
         "money":250,
         "dialogues":{
         },
-        "next":"erica"
+        "next":"erika"
     },
-    "erica":{
-        "characters": [{"key":"erica"}],
+    "erika":{
+        "characters": [{"key":"erika"}],
         "order": ["fleuriesp"],
         "money":200,
         "dialogues":{
             "entry":[
-                {"character":"Érica","text":"Evening! I've made a decision. Today, I become mysterious."},
-                {"character":"Érica","text":"Cute pink cigarettes, please.", "options":[
+                {"character":"Erika","text":"Evening! I've made a decision. Today, I become mysterious."},
+                {"character":"Erika","text":"Cute pink cigarettes, please.", "options":[
                     {"text":"No", "flag":"nocigs", "response":[
                         {"character":"Gail","text":"Not during my shift. I refuse to have this on my conscience."},
                         {"character":"Gail","text":"(...I always hated being called her bad influence.)"},
-                        {"character":"Érica","text":"Oh come on. Taking a moral stance? You?"},
+                        {"character":"Erika","text":"Oh come on. Taking a moral stance? You?"},
                         {"character":"Gail","text":"..."},
-                        {"character":"Érica","text":"Ugh. Fine. No pink cigarettes today.", "onComplete":"click"}
+                        {"character":"Erika","text":"Ugh. Fine. No pink cigarettes today.", "onComplete":"click"}
                     ]},
                     {"text":"Okay", "response":[
                         {"character":"Gail","text":"Who am I to stop you."},
                         {"character":"Gail","text":"(...They always called me her bad influence anyway.)"},
-                        {"character":"Érica","text":"Perfect. Thank you."}
+                        {"character":"Erika","text":"Perfect. Thank you."}
                     ]}
                 ]}
             ],
             "click":[
-                {"character":"Érica","text":"...","options":[
+                {"character":"Erika","text":"...","options":[
                     {"text":"What was behind organ's left panel?","if":"dots","ifnot":"dots_asked","flag":"dots_asked","response":[
-                        {"character":"Érica","text":"...Oh. So you found that."},
-                        {"character":"Érica","text":"Okay, look... Before you say anything - I swear I was super careful. But you know how it is... You start examining small weird cracks and suddenly you're halfway inside a giant antique instrument."},
-                        {"character":"Érica","text":"I found that weird puzzle in a huge pile of letters and thought it might be some secret message, hidden confession or, I don't know, a cursed artifact or something. It just felt so... important.","onComplete":"organ"}
+                        {"character":"Erika","text":"...Oh. So you found that."},
+                        {"character":"Erika","text":"Okay, look... Before you say anything - I swear I was super careful. But you know how it is... You start examining small weird cracks and suddenly you're halfway inside a giant antique instrument."},
+                        {"character":"Erika","text":"I found that weird puzzle in a huge pile of letters and thought it might be some secret message, hidden confession or, I don't know, a cursed artifact or something. It just felt so... important.","onComplete":"organ"}
                     ]},
                     {"text":"Everyone talk about the seal","response":[
-                        {"character":"Érica","text":"Letters to the Seal"}
+                        {"character":"Erika","text":"Letters to the Seal"}
                     ]},
                     {"text":"Dental Cinderella Investigation"},
                     {"text":"(End conversation)","if":"nocigs", "event":"end"},
@@ -134,28 +134,28 @@
                 ]}
             ],
             "organ":[
-                {"character":"Érica","text":"...","options":[
+                {"character":"Erika","text":"...","options":[
                     {"text":"What did you find?","response":[
-                        {"character":"Érica","text":"A lot of scribbled notes, marbles, dead moth in a matchbox... even a half-full tube of condensed milk. A whole hidden world stuffed behind that panel."},
-                        {"character":"Érica","text":"I think the local kids were using it as their secret mailbox. And maybe also a bit of a rubbish bin..."},
-                        {"character":"Érica","text":"It's kind of adorable. But yeah, no ancient mysteries or secret artifacts.","onComplete":"organ"}
+                        {"character":"Erika","text":"A lot of scribbled notes, marbles, dead moth in a matchbox... even a half-full tube of condensed milk. A whole hidden world stuffed behind that panel."},
+                        {"character":"Erika","text":"I think the local kids were using it as their secret mailbox. And maybe also a bit of a rubbish bin..."},
+                        {"character":"Erika","text":"It's kind of adorable. But yeah, no ancient mysteries or secret artifacts.","onComplete":"organ"}
                     ]},
                     {"text":"What happened to the organ?","response":[
-                        {"character":"Érica","text":"Well... there is a tiny chance that I knocked something loose. A pipe or... tube? Some old metal thing. It made a really sad dying sound."},
-                        {"character":"Érica","text":"I panicked, obviously. But I tried to put everything back how I found it... Ish. I mean, it still played at the next mass, so I convinced myself it was fine."},
-                        {"character":"Érica","text":"Also... let's be real, all that junk the kids were cramming in there did more damage anyway. Probably. So, you know, I'm not the only one to blame...","onComplete":"organ"}
+                        {"character":"Erika","text":"Well... there is a tiny chance that I knocked something loose. A pipe or... tube? Some old metal thing. It made a really sad dying sound."},
+                        {"character":"Erika","text":"I panicked, obviously. But I tried to put everything back how I found it... Ish. I mean, it still played at the next mass, so I convinced myself it was fine."},
+                        {"character":"Erika","text":"Also... let's be real, all that junk the kids were cramming in there did more damage anyway. Probably. So, you know, I'm not the only one to blame...","onComplete":"organ"}
                     ]},
                     {"text":"...","event":"click"}
                 ]},
-                {"character":"Érica","text":"...That's not great, isn't it?"},
-                {"character":"Érica","text":"..."},
-                {"character":"Érica","text":"I'll... sort something out. Make up for it somehow.","onComplete":"click"}
+                {"character":"Erika","text":"...That's not great, isn't it?"},
+                {"character":"Erika","text":"..."},
+                {"character":"Erika","text":"I'll... sort something out. Make up for it somehow.","onComplete":"click"}
             ],
             "end":[
-                {"character":"Érica","text":"FRIDAY EVENING AHH scooter ride"}
+                {"character":"Erika","text":"FRIDAY EVENING AHH scooter ride"}
             ],
             "checkout":[
-                {"character":"Érica","text":"FRIDAY EVENING AHH scooter ride"}
+                {"character":"Erika","text":"FRIDAY EVENING AHH scooter ride"}
             ]
         }
     }
