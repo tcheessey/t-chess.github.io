@@ -192,7 +192,7 @@
             ],
             "click":[
                 {"character":"Yves", "text":"...", "options":[
-                    {"text":"Whole town talks about the organ", "required":true,"response":[{"character":"Yves", "text":"Of course they do. It would've been too boring to just say it was its time. They've got their little theories."},
+                    {"text":"People are already talking about the organ", "required":true,"response":[{"character":"Yves", "text":"Of course they are. It would've been too boring to just say it was its time. They've got their little theories."},
                         {"character":"Yves", "text":"Still. It'll play again. Can't promise a third-day rise, but I've fixed worse.", "options":[
                             { "text": "Someone messed with it?" },
                             { "text": "Could it have been prevented?" },
@@ -228,7 +228,7 @@
             "wrong_change_complicate":[{ "character": "Yves", "text": "Don't complicate it."}],
             "checkout":[
                 {"character":"Gail","text":"Didn't you say you quit? What's with the papers?"},
-                {"character":"Yves","text":"Oh, I just like having them on hand."},
+                {"character":"Yves","text":"Oh, I just like having them on hand. I've noticed they're the kind of thing people run out of right when they actually need it."},
                 {"character":"Yves","text":"Anyway, thanks for the company and enjoy the rest of the evening. I like it when the town goes quiet. Makes me want to play flugelhorn and think about my funeral arrangements. What about you?", "options":[
                     {"text":"I'll smoke and pick at my nails", "point":"n"},
                     {"text":"I just want to sleep", "point":"p"},
@@ -247,7 +247,7 @@
         "dialogues":{
             "entry":[{ "character": "Beret Girl", "text": "...You're not Félix." },{"character":"Beret Girl","text":"Nevermind. Hi. Menthol Morleys, please.", "faces": {"mado":"side2"}, "facesAfter":{"mado":null}}],
             "click":[{"character":"Beret Girl","text":"...Can you be faster, please?", "faces": {"mado":"mde-browki"}, "facesAfter":{"mado":null}, "options":[
-                {"text":"Hm? Menthol what?", "point":"n", "response":[{"character":"Gail","text":"(Not deaf. Just petty.)"},{"character":"Beret Girl","text":"Menthol Morleys. I did say it. Clearly.", "faces": {"mado":"mde-browki-eyes"},"facesAfter":{"mado":null}}]},
+                {"text":"Hm? Menthol what?", "point":"n", "flag":"deafpetty", "response":[{"character":"Gail","text":"(Not deaf. Just petty.)"},{"character":"Beret Girl","text":"Menthol Morleys. I did say it. Clearly.", "faces": {"mado":"mde-browki-eyes"},"facesAfter":{"mado":null}}]},
                 {"text":"..."}
             ]}],
             "wrong_items":[{"character":"Beret Girl", "faces": {"mado":"mde-browki"}, "facesAfter":{"mado":null},"text":"I asked for Menthol Morleys. Not... whatever that is."}],
@@ -285,7 +285,7 @@
             "bgKey": 2, 
             "dialog": [
                 { "text": "Then I was gone for a while. Now it's a tobacco shop. Out of everything, this smell makes the most sense." },
-                { "text":"Also... apparently I'm working here now. Somehow got tricked into covering the counter for a bit."}
+                { "text":"Also... apparently I'm working here now. Somehow got tricked into covering the counter for a bit and then just... stayed."}
             ]
         }
     ],

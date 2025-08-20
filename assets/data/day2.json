@@ -41,10 +41,10 @@
             "seals":[
                 {"character":"Erika", "text":"Yeah... My sweet big floppers. White puffballs, speckled blobs, silly whiskery noses - I love every single version.", "faces": {"erika":"whoreeyes-smile"},"facesAfter":{"erika":null}},
                 {"character": "Erika","text": "You know, they showed up a bit early this year, and on such odd night."},
-                {"character": "Erika","text": "First seal appeared, all round and confused. Full moon overhead. And a few hours later - boom. Our sad little organ falls apart.", "faces": {"erika":"side-smile"},"facesAfter":{"erika":"neutral"}},
+                {"character": "Erika","text": "First seal appeared, all round and confused. Full moon overhead. And a few hours later - boom. Our sad little organ falls apart. Not like anyone was very shocked, considering who is-", "faces": {"erika":"side-smile"},"facesAfter":{"erika":"neutral"}},
                 {"character": "Erika","text": "...By the way. Do you know who's helping out at the church these days?"},
                 {"character": "Gail","text": "No? Jean-Noël doesn't handle it all himself anymore?"},
-                {"character": "Erika","text": "Oh, I'll let you find out. It's more fun that way.", "faces": {"erika":"sadbrows"},"facesAfter":{"erika":null}, "onComplete":"root"}
+                {"character": "Erika","text": "Oh, then I'll let you find out. It's more fun that way.", "faces": {"erika":"sadbrows"},"facesAfter":{"erika":null}, "onComplete":"root"}
             ],
             "end":[
                 {"character":"Gail","text":"So... Did you want to buy something, or...?"},
@@ -96,7 +96,7 @@
             "bell":[{ "character": "Postman", "text": "Lost the bell again, though. Shame. I liked that one.", "onComplete":"click" }],
             "wrong_items": [{ "character": "Postman", "text": "That's not mine." }],
             "wrong_items_jesuses": [{ "character": "Postman", "text": "JC. Blue packet. And three toffee candies. Wrapper with cow spots." }],
-            "wrong_price": [{ "character": "Postman", "text": "It's 147.", "faces": {"postman":"bobo-eyes"},"facesAfter":{"postman":"bobo"} }],
+            "wrong_price": [{ "character": "Postman", "text": "It's 186.", "faces": {"postman":"bobo-eyes"},"facesAfter":{"postman":"bobo"} }],
             "checkout":[{"character":"Postman","text":"Thanks. Back to work. Would be nice not to meet the pavement today.", "onComplete":"scene_end"}],
             "after_decor_ordered":[{"character":"Gail","text":"(Alright, mystery parcel. Let's see what's inside.)","options":[{"text":"Open","flag":"decor_received","event":"decor_received"}]},{"character":"Gail","text":"...","options":[
                 {"text":"Looks like it came out of a bin","point":"n"},{"text":"Oh joy, long live bad taste","point":"s"},{"text":"Ugly enough to feel like home","point":"p"},{"text":"That's... something"}
@@ -114,23 +114,23 @@
                 {"character":"Gail","text":"(Ah, yes. Shared lice, first cigarettes and years of mutual embarrassment.)"},
                 {"character":"Gail","text":"(That special kind of friend you've known long enough to forget how it started, and way too long to come out of it clean. Nostalgia with a side of nausea.)"},
                 {"character":"Gail","text":"(Let's call him...)","options":[
-                    {"text":"Raph"},
-                    {"text":"Raphaëllo","flag":"raphaello","point":"s"},
-                    {"text":"Clown","flag":"clown","point":"n"}
-                ]},
-                {"character":"{{raph}}","text":"...","options":[
-                    {"text":"Hello?", "response":[
-                        {"character":"{{raph}}","text":"Hey. Yeah, I heard you were back.","faces": {"raph":null}},
-                        {"character":"Gail","text":"Came to say hi to your dear old friend?"},
-                        {"character":"{{raph}}","text":"I'm here to buy Jean-Noël his mugwort Fleuries. That's all.","faces": {"raph":"lefteye"},"facesAfter":{"raph":null}}
-                    ]},
-                    {"text":"(Not talking to him first)", "flag":"nottalking", "point":"n", "response":[
-                        {"character":"{{raph}}","text":"What, still haven't learned to form a thought?","faces": {"raph":null}},
-                        {"character":"{{raph}}","text":"No, I didn't end up in jail like you all expected. Yeah, that's a rosary you're staring at. Cool one. Not some dainty shit, obviously.","faces": {"raph":"lefteye"}},
-                        {"character":"{{raph}}","text":"...Jean-Noël asked me to pick up his mugwort Fleuries. That's all.","facesAfter":{"raph":null}}
-                    ]}
+                    {"text":"Raph","event":"named"},
+                    {"text":"Raphaëllo","flag":"raphaello","point":"s","event":"named"},
+                    {"text":"Clown","flag":"clown","point":"n","event":"named"}
                 ]}
             ],
+            "named":[{"character":"{{raph}}","text":"...","options":[
+                {"text":"Hello?", "response":[
+                    {"character":"{{raph}}","text":"Hey. Yeah, I heard you were back.","faces": {"raph":null}},
+                    {"character":"Gail","text":"Came to say hi to your dear old friend?"},
+                    {"character":"{{raph}}","text":"I'm here to buy Jean-Noël his mugwort Fleuries. That's all.","faces": {"raph":"lefteye"},"facesAfter":{"raph":null}}
+                ]},
+                {"text":"(Not talking to him first)", "flag":"nottalking", "point":"n", "response":[
+                    {"character":"{{raph}}","text":"What, still haven't learned to form a thought?","faces": {"raph":null}},
+                    {"character":"{{raph}}","text":"No, I didn't end up in jail like you all expected. Yeah, that's a rosary you're staring at. Cool one. Not some dainty shit, obviously.","faces": {"raph":"lefteye"}},
+                    {"character":"{{raph}}","text":"...Jean-Noël asked me to pick up his mugwort Fleuries. That's all.","facesAfter":{"raph":null}}
+                ]}
+            ]}],
             "click":[{"character":"{{raph}}","text":"Funny seeing you behind a counter selling cigs. Thought you'd still be nicking 'em.","flag":"rclicked","onComplete":"click","faces": {"raph":"browki"},"facesAfter":{"raph":null}}],
             "click_rclicked":[
                 {"character":"{{raph}}","text":"...", "options":[
@@ -145,15 +145,17 @@
                         {"character":"{{raph}}","text":"...","faces": {"raph":null},"facesAfter":{"raph":"side-lefteye"}},
                         {"character":"{{raph}}","text":"Doesn't matter.","onComplete":"click"}
                     ]},
-                    {"text":"Heard the nuns think you wrecked the organ", "if":"churchboy", "once":true,"response":[
-                        {"character":"{{raph}}","text":"Oh, of course they'd think it was me. Everyone thinks that."},
+                    {"text":"You quit smoking?", "response":[{"character":"{{raph}}", "text":"Smoking fucking quit ME. Real men breathe air and trouble, not that weak shit.","faces": {"raph":"mouth"}},{"character":"{{raph}}", "text":"...Also Jean-Noël's hippie-smoke near gave me anaphylaxis.","faces": {"raph":"mouth-side-lefteye"},"facesAfter":{"raph":"lefteye"}, "onComplete":"click"}]},
+                    {"text":"Seems like you're the main suspect in the organ murder", "if":"churchboy", "once":true,"response":[
+                        {"character":"{{raph}}","text":"Oh, of course it's me. Everyone thinks that."},
                         {"character":"Gail","text":"(God's angriest little helper.)"},
-                        {"character":"{{raph}}", "text":"Yeah, sure. Blame the walking fuck-up. Wouldn't be the worst thing I've done, right?","faces": {"raph":"righteye"}, "options":[
+                        {"character":"{{raph}}", "text":"Sure. Blame the walking fuck-up. Wouldn't be the worst thing I've done, right?","faces": {"raph":"righteye"}, "options":[
                             {"text":"I can believe it, honestly", "response":[
                                 {"character":"{{raph}}", "text":"Jesus. You really don't think people can get better?","faces": {"raph":null}, "options":[
                                     {"text":"I didn't say that", "response":[{"character":"{{raph}}","text":"They can. Rare, though.","faces": {"raph":"side-teeth"},"facesAfter":{"raph":"lefteye"}, "onComplete":"click"}]},
                                     {"text":"Not really", "flag":"butthurt", "response":[
-                                        {"character":"{{raph}}", "text":"You know what? Fuck this. Believe whatever you want.","faces": {"raph":"side-grr"},"facesAfter":{"raph":"lefteye-grr-teeth"}},
+                                        {"character":"{{raph}}", "text":"...","faces": {"raph":"side-lefteye"}},
+                                        {"character":"{{raph}}", "text":"Okay. Believe whatever you want.","facesAfter":{"raph":"lefteye"}},
                                         {"character":"{{raph}}", "text":"I'm leaving today. Do me a favour and be gone again when I get back.", "onComplete":"scene_end"}
                                     ]}
                                 ]}
@@ -161,7 +163,6 @@
                             {"text":"Not saying it's true", "response":[{"character":"{{raph}}","text":"Doesn't help to repeat it. Just give me the damn cigs.","faces": {"raph":"side-lefteye"},"facesAfter":{"raph":"side"},"onComplete":"click"}]}
                         ]}
                     ]},
-                    {"text":"You quit smoking?", "response":[{"character":"{{raph}}", "text":"Smoking fucking quit ME. Real men breathe air and trouble, not that weak shit.","faces": {"raph":"mouth"}},{"character":"{{raph}}", "text":"...Also Jean-Noël's hippie-smoke near gave me anaphylaxis.","faces": {"raph":"mouth-side-lefteye"},"facesAfter":{"raph":"lefteye"}, "onComplete":"click"}]},
                     {"text":"So you're a good boy now?", "if":"churchboy", "response":[{"character":"{{raph}}", "text":"That's disgusting. But yeah, sort of. Trying to be. At least haven't hated myself as much lately.","faces": {"raph":"browki-lefteye"},"facesAfter":{"raph":"lefteye"}, "onComplete":"click"}]},
                     {"text":"What did your boss ask you to buy?", "response":[{"character":"{{raph}}","text":"Those flowery ones. Mugwort something... Fleuries."}]},
                     {"text":"..."}
@@ -176,8 +177,8 @@
                 { "character":"{{raph}}","text": "Yeah. That's all.", "onComplete":"scene_end" }
             ],
             "after_butthurt":[{"character":"Gail","text":"Wow. Didn't even take the cigs.","options":[
-                {"text":"Loser","point":"n"},
-                {"text":"..."}
+                {"text":"Loser","point":"n","event":"next_scene"},
+                {"text":"...","event":"next_scene"}
             ]}]
         },
         "break":[
@@ -219,12 +220,12 @@
                         {"character":"Beret Girl","text":"...And you're?..", "facesAfter": {"mado":null}, "options":[
                             {"text":"Abigaïl", "flag":"mado_abigail", "response":[{"character":"Beret Girl","text":"Okay, Abigaïl. I'm Madeleine, by the way.", "options":[
                                 {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed.", "faces": {"mado":"mde"}, "facesAfter": {"mado":null}}]},
-                                {"text":"Like the cake?","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
                             ]}]},
                             {"text":"Gail", "flag":"mado_gail","response":[{"character":"Beret Girl","text":"Okay, Gail. I'm Mado, by the way."}]},
                             {"text":"Fish, short for Félicia", "flag":"mado_fish","response":[{"character":"Beret Girl","text":"...Fish? Alright... I'm Mado. Short for Madeleine.", "options":[
                                 {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed.", "faces": {"mado":"mde"}, "facesAfter": {"mado":null}}]},
-                                {"text":"Like the cake?","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
                             ]}]}
                         ]}
                     ]},
@@ -257,8 +258,8 @@
             ],
             "root":[
                 {"character":"Yves","text":"...","options":[
-                    {"text":"How are organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.","onComplete":"root"}]},
-                    {"text":"You hear about the seal?","response":[{"character":"Yves","text":"Saw it. Smart beast. Lies around, gets fed. Does better than most of us.","onComplete":"root"}]},
+                    {"text":"How is the organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.","onComplete":"root"}]},
+                    {"text":"You hear about the seal?","response":[{"character":"Yves","text":"Saw it. Smart beast. Lies around, gets fed. Does better than most of us."},{"character":"Yves","text":"Got me thinking I should just lie down on the pavement too. Seal's doing it. Postman's doing it. Both look perfectly at peace with it.","onComplete":"root"}]},
                     {"text":"About organ's left panel...","if":"dots_solved","response":[
                         {"character":"Gail","text":"Maybe there was something weird there?","flag":"dotsorbellowsasked"},
                         {"character":"Gail","text":"(If that doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
@@ -272,7 +273,7 @@
                         {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? It wasn't only about bellows, the whole left half was a mess. Pipes knocked out of place, some mold, bit of rot. Keyboard too - half the keys loose, a few straight-up gone."},
                         {"character":"Yves","text":"So... yeah. Whole thing was dying already.", "faces": {"yves":"nosmile"}},
                         {"character":"Gail","text":"And you helped it die faster?"},
-                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports sent straight to the diocese. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed.", "faces": {"yves":"grr"}},
+                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports all nice and proper, just how the diocese wants them. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed.", "faces": {"yves":"grr"}},
                         {"character":"Yves","text":"Eventually I stopped checking it properly. Just looked at the parts you could see without crawling in all the way. Figured if they didn't care, why should I?", "faces": {"yves":"nosmile"}, "options":[
                             {"text":"So you cracked first, like a loser?", "point":"n"},
                             {"text":"All that ass and no squat", "point":"s"},
@@ -327,12 +328,12 @@
                 { "character": "Félix", "text": "What about you, kid?", "options":[
                     {"text":"Take a look at the seal", "flag":"outro2seal", "response":[{"character":"Yves","text":"Then follow the sound of Erika's voice. Can't miss it."}]},
                     {"text":"Go bother Erika if I find her", "flag":"outro2erika","response":[{"character":"Yves","text":"Then look somewhere near the seal. Can't miss it."}]},
-                    {"text":"Sudoku and silence", "flag":"outro2sudoku","response":[{"character":"Félix","text":"Sooodoku and siiilence, dear. Got your knitting too?"}]},
+                    {"text":"Sudoku and silence", "flag":"outro2sudoku","response":[{"character":"Gail","text":"(Man I love sudokus.)"},{"character":"Félix","text":"Sooodoku and siiilence, dear. Got your knitting too?"}]},
                     {"text":"Existential dread", "point":"p", "flag":"outro2dread","response":[{"character":"Félix","text":"...Jeepers creepers. Easy there."}]}
                 ]},
                 { "character": "Yves", "text": "Well, have a nice evening, {{name_yves}}.","onComplete":"d2bye" }
             ],
-            "d2bye":[{"character":"Félix","text":"Night-night."},{ "character": "Gail", "text": "..."},{ "character": "Gail","flag":"outro2leave", "text": "...", "onComplete":"d2end"}],
+            "d2bye":[{"character":"Félix","text":"Night-night."},{ "character": "Gail", "text": "..."},{ "character": "Gail","text": "...", "onComplete":"d2end"}],
             "d2bye_yves_fish":[
                 {"character":"Félix","text":"Fish?"},
                 {"character":"Yves","text":"Mademoiselle said her name is Fish. As in Félicia."},
@@ -340,7 +341,7 @@
                 {"character":"Yves","text":"Let's go."},
                 {"character":"Félix","text":"Oh, that's amazing. Fish! Incredible."},
                 { "character": "Gail", "text": "..."},
-                { "character": "Gail", "text": "...","flag":"outro2leave", "onComplete":"d2end"}
+                { "character": "Gail", "text": "...","onComplete":"d2end"}
             ],
             "d2end_outro2seal":[{"text":"Gail wandered through the town square, then the park, then down to the docks. She never found the seal, just sky, sea, and gulls. That was enough.","onComplete":"theend"}],
             "d2end_outro2erika":[{"text":"Gail checked Erika's house. Then the back of the post office, where the newspaper team hides. Erika wasn't anywhere, but the Friday buzz of pubs and cafés wasn't too bad either.","onComplete":"theend"}],

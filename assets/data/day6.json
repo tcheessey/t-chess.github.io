@@ -4,12 +4,16 @@
     "jn":{},
     "yves":{},
     "mado": {
+        "characters": [{"key":"mado"}],
+        "order": ["branique"],
+        "money":200,
         "dialogues":{
-            "click":[
-                {"character":"{{mado}}","text":"...", "options":[
-                    {"text":"Which cigarettes were yours?","response":[{"character":"{{mado}}","text":"Menthol Morleys. Thought you'd remember by now."}]}
-                ]}
-            ]
+            "entry":[
+                {"character":"{{mado}}", "text":"Thanks. That means a lot."},
+                {"character":"{{mado}}", "text":"Let me buy you a pack of whatever you smoke. Can you ring it up?"}
+            ],
+            "click":[{"character":"{{mado}}", "text":"Your usual."}],
+            "wrong_items":[{"character":"Gail", "text":"(That's not what I smoke.)"}]
         }
     },
     "outro":{

@@ -128,7 +128,6 @@
                     {"text":"Everyone talk about the seal","response":[
                         {"character":"Erika","text":"Letters to the Seal"}
                     ]},
-                    {"text":"Dental Cinderella Investigation"},
                     {"text":"(End conversation)","if":"nocigs", "event":"end"},
                     {"text":"...","ifnot":"nocigs"}
                 ]}
