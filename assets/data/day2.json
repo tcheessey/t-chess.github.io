@@ -220,12 +220,12 @@
                         {"character":"Beret Girl","text":"...And you're?..", "facesAfter": {"mado":null}, "options":[
                             {"text":"Abigaïl", "flag":"mado_abigail", "response":[{"character":"Beret Girl","text":"Okay, Abigaïl. I'm Madeleine, by the way.", "options":[
                                 {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed.", "faces": {"mado":"mde"}, "facesAfter": {"mado":null}}]},
-                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mum loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
                             ]}]},
                             {"text":"Gail", "flag":"mado_gail","response":[{"character":"Beret Girl","text":"Okay, Gail. I'm Mado, by the way."}]},
                             {"text":"Fish, short for Félicia", "flag":"mado_fish","response":[{"character":"Beret Girl","text":"...Fish? Alright... I'm Mado. Short for Madeleine.", "options":[
                                 {"text":"Like Mary Magdalene?","response":[{"character":"{{mado}}","text":"Please no. If I hear that name one more time this month, I swear... This town's obsessed.", "faces": {"mado":"mde"}, "facesAfter": {"mado":null}}]},
-                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mom loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
+                                {"text":"Like the cake?","flag":"madocake","response":[{"character":"{{mado}}", "faces": {"mado":"side2-blush25"}, "facesAfter": {"mado":null},"text":"Mhm. Mum loves them."},{"character":"{{mado}}","text":"Thanks for not saying Mary Magdalene, by the way. I've heard that name more this month than my whole life."}]}
                             ]}]}
                         ]}
                     ]},
@@ -260,7 +260,7 @@
                 {"character":"Yves","text":"...","options":[
                     {"text":"How is the organ repair going?","response":[{"character":"Yves","text":"So far so good. I mean, it's been half-dead for a decade at least, and all we can really do now is keep frankensteining it together. But no one in this town ever minded its crooked charm. I think it'll be fine.","onComplete":"root"}]},
                     {"text":"You hear about the seal?","response":[{"character":"Yves","text":"Saw it. Smart beast. Lies around, gets fed. Does better than most of us."},{"character":"Yves","text":"Got me thinking I should just lie down on the pavement too. Seal's doing it. Postman's doing it. Both look perfectly at peace with it.","onComplete":"root"}]},
-                    {"text":"About organ's left panel...","if":"dots_solved","response":[
+                    {"text":"About organ's left panel...","if":"dots_solved","flag":"dots_yves","response":[
                         {"character":"Gail","text":"Maybe there was something weird there?","flag":"dotsorbellowsasked"},
                         {"character":"Gail","text":"(If that doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
                         {"character":"Yves","text":"Hm... That side was much worse than the rest of the buffet. Pipes knocked out of place, some mold, bit of rot. But nothing too special. Old things fall apart funny sometimes.", "faces": {"yves":"nosmile-browki"}},

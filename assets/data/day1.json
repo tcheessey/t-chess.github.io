@@ -15,9 +15,18 @@
                 { "text": "[Click on the ? button to talk to the customer and/or ask them to remind or explain their order.]" },
                 { "character": "Félix", "text": "Let's try it out. Sell me matches and a tin of Morley.", "faces": {"felix":"smile"},"facesAfter":{"felix":null}}
             ],
+            "howto":[
+                { "text": "[Click on an item to read its description. Drag it into the bag to add it to the purchase.]" },
+                { "text": "[To ring up the total, enter the price on the register, then drag the lever down.]" },
+                { "text": "[Count the customer's money, then click on the right banknotes and coins to give them their change.]" },
+                { "text": "[Click on the ? button to talk to the customer and/or ask them to remind or explain their order.]" }
+            ],
             "wrong_items": [{ "character": "Félix", "text": "That's not what I asked for. Try again.", "flag":"st1", "onComplete":"click" }],
             "wrong_price": [{ "character": "Félix", "text": "Right stuff, wrong number. Do the math again.", "flag":"st1" }],
-            "click":[{ "character": "Félix", "text": "A tin of Morley tobacco. A box of matches. In the bag, on the register, then the lever."}],
+            "click":[{ "character": "Félix", "text": "A tin of Morley tobacco. A box of matches. In the bag, on the register, then the lever.","options":[
+                {"text":"[Show detailed instructions]","event":"howto"},
+                {"text":"..."}
+            ]}],
             "paying":[{ "character": "Félix", "text": "Here's 300. Let's see if you can count."},{"character":"Gail","text":"(Rude. I'll think about giving you your full change.)"}],
             "wrong_change_under":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.","point":"n","flag":"shortchanging","faces":{"felix":"smile-brows"},"facesAfter":{"felix":null},"options":[
                 {"text":"Yet...","point":"n","response":[{"character":"Félix","text":"Ha. That's the spirit. I like it."}]},
@@ -41,8 +50,8 @@
             "wrong_items_st1": [{ "character": "Félix", "text": "That's not what I asked for. Again.", "faces": {"felix":"grr"},"facesAfter":{"felix":null} }],
             "click":[
                 { "character": "Félix", "text": "...", "options": [
-                    { "text": "This place wasn't a tobacconist before","required":true,"response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot.", "faces": {"felix":"smile-brows"}},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.", "faces": {"felix":"side"},"facesAfter":{"felix":null},"onComplete":"click"}] },
-                    { "text": "Did you know my mom?","once":true, "required":true,"response": [{ "character": "Félix", "text": "Not well. By the time I came back, she had already... found God. Poor guy." }, {"character": "Félix","text":"Spent most of her time between the church and the hospital, I guess. Didn't see her here much."}, { "character": "Félix", "text": "Honestly surprised she didn't sell the place and hand it to the church.", "options":[
+                    { "text": "This place wasn't a tobacconist before","response":[{"character": "Félix", "text":"Yeah, I opened it about a year ago. Year and a half, maybe. Came back to Larris, found the place empty, figured I'd try selling something legal for once."},{"character": "Félix", "text":"You know the trope. The big world doesn't want you, so you crawl back to your quirky little hometown to complete your mandatory redemption subplot.", "faces": {"felix":"smile-brows"}},{"character": "Félix", "text":"Anyway. Could've ended up somewhere worse than a smoke-stained counter.", "faces": {"felix":"side"},"facesAfter":{"felix":null},"onComplete":"click"}] },
+                    { "text": "You knew my mum, didn't you?","once":true, "required":true,"response": [{ "character": "Félix", "text": "Not well. By the time I came back, she had already... found God. Poor guy." }, {"character": "Félix","text":"Spent most of her time between the church and the hospital, I guess. Didn't see her here much."}, { "character": "Félix", "text": "Honestly surprised she didn't sell the place and hand it to the church.", "options":[
                         { "text": "She probably meant to","point":"p","response":[{"character":"Félix","text":"Or maybe you just need her to be the villain. Easier that way.", "onComplete":"click"}]},
                         { "text": "Well, good for me","point":"n","response":[{"character":"Félix","text":"Praise be to private property.", "onComplete":"click"}]}] }] },
                     { "text": "What was it you asked for?","response":[{"character": "Félix", "text":"What, riddle too hard? It's just a newspaper and two packs of rolling papers.", "faces": {"felix":"smile-brows"},"facesAfter":{"felix":null},"onComplete":"click"}]},
@@ -105,7 +114,7 @@
             "click":[
                 { "character": "Jean-Noël", "text": "♪ Mmm-hm-mmmmm ♪", "options": [
                     { "text": "What happened to the organ?", "required":true, "response":[{"character": "Jean-Noël", "text":"Organs are dramatic things. Full of held breath and pressure... too much of it, and even sacred things crack.", "faces": {"jeannoel":"closed"}},{"character": "Jean-Noël", "text":"Thank God our good old repairman gets along with anything that's fallen out of tune.","onComplete":"organ"}] },
-                    { "text": "What did your funeral speech mean?","response":[{"character":"Gail","text":"(какое-то описание че он там буровил я не придумала, просто filler text)"},{"character": "Jean-Noël", "text":"We build meaning like churches - beautiful, hollow, echoing the absence they were built around."},{"character": "Jean-Noël", "text":"...What's missing is what makes it sacred. That's how eulogies work."},{"character": "Jean-Noël", "text":"Your mom knew that better than anyone."},{"character": "Gail", "text":"Yeah. Got so enlightened her heart checked out."}, {"character": "Jean-Noël", "text":"Well, some prayers answer themselves.","onComplete":"click"}] },
+                    { "text": "What did your funeral speech mean?","response":[{"character":"Gail","text":"(какое-то описание че он там буровил я не придумала, просто filler text)"},{"character": "Jean-Noël", "text":"We build meaning like churches - beautiful, hollow, echoing the absence they were built around."},{"character": "Jean-Noël", "text":"...What's missing is what makes it sacred. That's how eulogies work."},{"character": "Jean-Noël", "text":"Your mum knew that better than anyone."},{"character": "Gail", "text":"Yeah. Got so enlightened her heart checked out."}, {"character": "Jean-Noël", "text":"Well, some prayers answer themselves.","onComplete":"click"}] },
                     { "text": "Which holy blend are we burning today?", "response":[{"character": "Jean-Noël", "text":"Mugwort Fleuries. And the news. Let it be so.","onComplete":"click"}] },
                     { "text": "..."}
                 ]}
@@ -272,7 +281,7 @@
         {
             "bgKey": 0, 
             "dialog": [
-                { "text": "When I was little, the fishmonger was downstairs. The whole building smelled like salt and guts, but after a while, I stopped noticing. Mom never did." }
+                { "text": "When I was little, the fishmonger was downstairs. The whole building smelled like salt and guts, but after a while, I stopped noticing. Mum never did." }
             ]
         },
         {

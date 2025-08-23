@@ -83,7 +83,7 @@
                         {"character":"Erika","text":"But for now, it just... exists.","onComplete":"seal"}
                     ]},
                     {"text":"You started smoking?","response":[
-                        {"character":"Erika","text":"Nope, these are for my mom. Sadly.", "faces": {"erika":"side"}},
+                        {"character":"Erika","text":"Nope, these are for my mum. Sadly.", "faces": {"erika":"side"}},
                         {"character":"Erika","text":"But... I mean, I've been thinking about it. I love the idea of it - the little rituals and quiet pauses between words and the way people lean in closer just because of a cigarette."},
                         {"character":"Erika","text":"Drifting smoke and cigarette holders... Super chic."},
                         {"character":"Erika","text":"I keep telling myself I'll start, like, next week or whatever... I even plan it out sometimes - the perfect moment, the perfect lighter."},
@@ -127,7 +127,7 @@
                 {"character":"Erika","text":"..."},
                 {"character":"Erika","text":"I'll... sort something out. Make up for it somehow.", "faces": {"erika":"nosmile-sadbrows"},"onComplete":"click"}
             ],
-            "wrong_items":[{"character":"Erika", "text": "My mom smokes red Morleys, remember?"}],
+            "wrong_items":[{"character":"Erika", "text": "My mum smokes red Morleys, remember?"}],
             "checkout":[{"character":"Erika","text":"Thanks. Don't forget to read the paper, I worked hard on it!", "faces": {"erika":null}, "onComplete":"scene_end"}]
         },
         "break":[{"character":"Gail", "text": "(Well. Let's see what's in the paper?)"}],

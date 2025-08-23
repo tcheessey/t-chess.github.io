@@ -4,6 +4,11 @@
         "order": [""],
         "money":250,
         "dialogues":{
+            "entry":[],
+            "entry_notooth":[],
+            "click":[
+                {"text":"What"}
+            ]
         },
         "next":"nunsd4"
     },
@@ -26,17 +31,20 @@
                 {"character":"Babette","text":"Huh? About what? Don't tell me you suddenly feel guilty and want to tell him about... that, do you?"},
                 {"character":"Lucie","text":"What? No! Oh God, calm down."},
                 {"character":"Lucie","text":"It's just... Matron asked something weird yesterday. If Father Jean-Noël had started getting ready for the organ festival, or... something like that."},
-                {"character":"Lucie","text":"I said something like, \"yeah, haha, with a dead organ\", but she just gave me this confused look. Like she had no idea what I meant.","flag":"nunsd4clicked"}
+                {"character":"Lucie","text":"I said something like, \"yeah, haha, with a dead organ\", but she just gave me this confused look. Like she had no idea what I meant.","flag":"nunsd4clicked", "onComplete":"click"}
             ],
             "click_nunsd4clicked":[
                 {"character":"Babette","text":"That's... weird.", "options":[
-                    {"text":"She doesn't know it's dead?", "response":[{"character":"","text":"...That's impossible. Father Jean-Noël has to report to the bishop every week. And if the bishop knows, you can be sure Matron does too. That's just how it works.", "options":[
+                    {"text":"She doesn't know it's dead?", "required":true, "response":[{"character":"","text":"...That's impossible. Father Jean-Noël has to report to the bishop every week. And if the bishop knows, you can be sure Matron does too. That's just how it works.", "options":[
                         {"text":""},
                         {"text":""},
                         {"text":""}
                     ]}]},
                     {"text":"Not a cigar today?", "response":[{"character":"","text":"..."}]},
-                    {"text":"Can you repeate the riddle?", "response":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?"}]},
+                    {"text":"Can you repeate the riddle?", "response":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?","options":[
+                        {"text":"wtf"},
+                        {"text":"...","event":"click"}
+                    ]}]},
                     {"text":"..."}
                 ]}
             ],
