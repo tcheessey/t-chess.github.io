@@ -1,16 +1,35 @@
 {
     "felix":{
         "characters": [{"key":"felix"}],
-        "order": [""],
-        "money":250,
+        "order": ["morleyt", "papirky"],
+        "money":300,
         "dialogues":{
-            "entry":[],
-            "entry_notooth":[],
-            "click":[
-                {"text":"What"}
-            ]
+            "entry":[
+                {"character":"Félix","text":"Rise and shine, kid. Another day, another victory in our heroic struggle against health campaigns and self-control."},
+                {"character":"Félix","text":"And to celebrate the triumph - give me a tin of Morley and papers."}
+            ],
+            "click":[{"character":"Félix","text":"So, how's it going here?","options":[
+                {"text":"СЮДА","event":"news"},
+                {"text":"Someone left me a tooth last shift","required":true,"ifnot":"notooth","response":[{"character":"Félix","text":"Charming. Even tied up with a bow.","onComplete":"tooth"}]},
+                {"text":"What was it you asked for?","response":[{"character":"Félix","text":"God... Alright, let's go slow. See that red-and-white tin on the shelf, says Morley? Yes, that's tobacco. Good."},{"character":"Félix","text":"Now, on the counter, your left hand, the greenish box with papers in it. Open it. Take exactly one pack. That's it.","onComplete":"click"}]},
+                {"text":"..."}
+            ]}],
+            "news":[{"text":"соц опрос мне кажется тут надо сделать такой небольшой чекап поинт если что-то непонятно или остались вопросы или хз напомнить что-то..... и вот с челом это можно обсудить", "onComplete":"click"}],
+            "tooth":[{"character":"Félix","text":"...","options":[
+                {"text":"Should I just offer it to everyone?","if":"notooth","response":[{"character":"Félix","text":"Heh, like you're brave enough for that... From what I gathered, if you can't slip it in quietly, better not. No need to make things weirder."},{"character":"Félix","text":"Talk to people, play some mind games. Drop the jar in with their order if you're sure enough. Just know they might notice later, or not return it at all - then it's gone.","onComplete":"tooth"}]},
+                {"text":"You know anyone missing a tooth?","response":[{"character":"Félix","text":"Ha. In Larris? Could be half the town."},{"character":"Félix","text":"But if it hasn't gone dark yet, it's not ancient. Someone probably dropped it fairly recently.","onComplete":"tooth"}]},
+                {"text":"Got any idea how I could slip it to someone?","ifnot":"notooth","response":[{"character":"Félix","text":"...Hm. Well. Talk to people, feel them out. If you're sure, slip the jar into their bag. Just know they might spot it later, or not give it back. And then it's gone.","onComplete":"tooth"}]},
+                {"text":"...","if":"notooth","event":"check"},
+                {"text":"...","ifnot":"notooth","event":"click"}
+            ]}],
+            "checkout":[{"character":"Félix","text":"Thanks. Have fun with your cancer sticks and human leftovers.","onComplete":"check"}],
+            "checkout_notooth":[{"character":"Félix","text":"Thanks. Oh, and about that small jar by the till... It has a human tooth in it."},{"character":"Félix","text":"Let's say it's... something somebody left, to pass on to someone else... only nobody's, you know, a hundred percent sure who."},{"character":"Félix","text":"Can't say more, but if you feel like playing dental Cinderella, go ahead.","onComplete":"tooth"}],
+            "check":[{"character":"Félix","text":"...And good work with the till. Did it neater than me. Keep it up, that's yours to handle at the end of every shift now.","onComplete":"bye"}],
+            "check_irresponsible3":[{"character":"Félix","text":"...And the till. Thought I asked you to count it last shift. Maybe I forgot, maybe you slacked off — either way, do it today. End of every shift, it's your job.","onComplete":"bye"}],
+            "bye":[{"character":"Félix","text":"Alright, I'm off to greater things.", "onComplete":"scene_end"}]
         },
-        "next":"nunsd4"
+        "next":"nunsd4",
+        "break":[{"character":"Gail", "text": "(...Another day in paradise.)"}]
     },
     "nunsd4":{
         "characters":[{"key":"babette"},{"key":"lucie"}],
@@ -35,71 +54,95 @@
             ],
             "click_nunsd4clicked":[
                 {"character":"Babette","text":"That's... weird.", "options":[
-                    {"text":"She doesn't know it's dead?", "required":true, "response":[{"character":"","text":"...That's impossible. Father Jean-Noël has to report to the bishop every week. And if the bishop knows, you can be sure Matron does too. That's just how it works.", "options":[
-                        {"text":""},
-                        {"text":""},
-                        {"text":""}
-                    ]}]},
-                    {"text":"Not a cigar today?", "response":[{"character":"","text":"..."}]},
-                    {"text":"Can you repeate the riddle?", "response":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?","options":[
-                        {"text":"wtf"},
-                        {"text":"...","event":"click"}
-                    ]}]},
+                    {"text":"She doesn't know it's dead?", "required":true, "response":[{"character":"Lucie","text":"...That's impossible. Father Jean-Noël has to report to the bishop every week. And if the bishop knows, you can be sure Matron does too.","onComplete":"reports"}]},
+                    {"text":"Not a cigar today?", "response":[{"character":"Lucie","text":"Mm. Not this time. Doesn't feel like our kind of day for that.","onComplete":"click"}]},
+                    {"text":"Can you repeat the riddle?", "event":"repeat"},
                     {"text":"..."}
                 ]}
             ],
-            "wrong_items":[{"character":"","text":""}],
-            "wrong_price":[{"character":"","text":""}],
-            "checkout":[{"character":"","text":"", "onComplete":"scene_end"}]
+            "repeat":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?","options":[
+                {"text":"Still not getting it","point":"p", "flag":"lavenderless", "response":[{"character":"Babette","text":"Ah, darling... It's Lavender Fleuries. Like those violet lavender sachets people keep in drawers to calm their nerves.","onComplete":"click"}]},
+                {"text":"...","event":"click"}
+            ]}],
+            "repeat_lavenderless":[{"character":"Babette","text":"Lavender Fleuries, dear."}],
+            "reports":[{"character":"Lucie","text":"That's just how it works.", "options":[
+                {"text":"Didn't Yves write that the organ was falling apart?","if":"bellows_asked","required":true,"response":[{"character":"Lucie","text":"Umm. I've seen those reports. They always said the organ was in some kind of... stable condition. I kept wondering if it's really supposed to sound like that, but I thought maybe I just don't understand music, so I never spoke up.","onComplete":"reports"}]},
+                {"text":"He reports to the bishop?","response":[{"character":"Babette","text":"Mhm. Usually nothing dramatic - just how things are going in the parish, what they might need from the diocese. But the organ dying feels like... kind of a big thing to leave out, doesn't it?","onComplete":"reports"}]},
+                {"text":"Why would he hide it?","response":[{"character":"Babette","text":"Maybe to cover for that troublesome boy he let help out? Father Jean-Noël doesn't exactly have the best reputation with the dioces-"},{"character":"Lucie","text":"Babette. We should probably get going."},{"character":"Babette","text":"...Right. Sorry.","onComplete":"reports"}]},
+                {"text":"...","event":"click"}
+            ]}],
+            "wrong_items": [{ "character": "Babette", "text": "Try again. We're picky sinners." }],
+            "wrong_price": [{"character":"Lucie", "text":"Hmm. That's not what it cost last time."}],
+            "checkout":[
+                {"character":"Lucie","text":"Thanks. So... I'll stop by Father Jean-Noël on my way."},
+                {"character":"Babette","text":"...Alright. I'll just head straight to the hospital."},
+                {"character":"Lucie","text":"Suit yourself. See you later."},
+                {"character":"Babette","text":"Mhm. Later.","onComplete":"scene_end"}
+            ]
         },
         "next":"yves"
     },
     "yves":{
         "characters": [{"key":"yves"}],
-        "order": [""],
-        "money":250,
+        "order": ["ashtray"],
+        "money":200,
         "dialogues":{
+            "entry":[ {"character":"Yves", "text":"Good afternoon, {{name_yves}}. I need an ashtray for the workshop."}, {"character":"Yves", "text":"Accidentally retired the old one, and now customers are flicking ash into empty tobacco tins. Not great."}],
             "click":[
                 {"character":"Yves","text":"...","options":[
-                    {"text":"About the left panel...","if":"dots", "ifnot":"dots_asked", "response":[
+                    {"text":"About organ's left panel...","if":"dots_solved","ifnot":"dots_yves","flag":"dots_yves","response":[
                         {"character":"Gail","text":"Maybe there was something weird there?"},
-                        {"character":"Gail","text":"(If that newspaper doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
-                        {"character":"Yves","text":"Hm... Pipes there were worse. Weirdly worse than the rest of the buffet. But nothing too special. Old things fall apart funny sometimes."},
-                        {"character":"Yves","text":"Strange thing to ask.","onComplete":"click"}
+                        {"character":"Gail","text":"(If that doodle wasn't just a joke, and the left panel's hiding something... Yves would've found it by now, right?)"},
+                        {"character":"Yves","text":"Hm... That side was much worse than the rest of the buffet. Pipes knocked out of place, some mold, bit of rot. But nothing too special. Old things fall apart funny sometimes.", "faces": {"yves":"nosmile-browki"}},
+                        {"character":"Yves","text":"...Strange thing to ask.", "faces": {"yves":"nosmile"},"facesAfter":{"yves":null},"onComplete":"click"}
                     ]},
-                    {"text":"About organ's bellows...","if":"bellows","ifnot":"bellows_asked","flag":"bellows_asked","response":[
-                        {"character":"Gail","text":"(Alright. Let's pull that thread.)"},
+                    {"text":"About organ's bellows...","if":"bellows_solved","ifnot":"bellows_asked","flag":"bellows_asked","once":true,"required":true,"response":[
+                        {"character":"Gail","text":"(Alright. Let's pull that thread.)", "faces": {"yves":"nosmile"}},
                         {"character":"Gail","text":"Couldn't it have been prevented? I heard bellows are often the first thing to go. Problematic part."},
-                        {"character":"Gail","text":"...Most irritating to check."},
-                        {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? Whole thing was dying already."},
+                        {"character":"Gail","text":"...Most irritating to check.", "faces": {"yves":"nosmile-browki"}},
+                        {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway? It wasn't only about bellows, the whole left half was a mess. Pipes knocked out of place, some mold, bit of rot. Keyboard too - half the keys loose, a few straight-up gone."},
+                        {"character":"Yves","text":"So... yeah. Whole thing was dying already.", "faces": {"yves":"nosmile"}},
                         {"character":"Gail","text":"And you helped it die faster?"},
-                        {"character":"Yves","text":"I kept it breathing longer than it had any right to."},
+                        {"character":"Yves","text":"Helped it die? I did every bloody check they asked for, twice a year, reports all nice and proper, just how the diocese wants them. Told them it was falling apart and needed proper repairs, not patch jobs and prayers. No reaction. Nothing changed.", "faces": {"yves":"grr"}},
+                        {"character":"Yves","text":"Eventually I stopped checking it properly. Just looked at the parts you could see without crawling in all the way. Figured if they didn't care, why should I?", "faces": {"yves":"nosmile"}, "options":[
+                            {"text":"So you cracked first, like a loser?", "point":"n"},
+                            {"text":"All that ass and no squat", "point":"s"},
+                            {"text":"Sometimes rot's the only answer...", "point":"p"},
+                            {"text":"(Let silence do the work)"}
+                        ]},
                         {"character":"Yves","text":"..."},
-                        {"character":"Yves","text":"..."},
-                        {"character":"Yves","text":"Well. Maybe I could've done my job better."},
+                        {"character":"Yves","text":"Well. Maybe I could've done my job better.", "faces": {"yves":"nosmile-browki"},"facesAfter":{"yves":"nosmile"}},
                         {"character":"Yves","text":"...I'll take it off the repair cost. Not much, but fair's fair."},
-                        {"character":"Yves","text":"You can be really nasty, huh?","onComplete":"click"}
+                        {"character":"Yves","text":"You can be really nasty, huh?", "faces": {"yves":"browki"},"facesAfter":{"yves":null},"onComplete":"click"}
+                    ]},
+                    {"text":"So you wrote in your reports that the organ was falling apart?","if":"bellows_asked","response":[
+                        {"character":"Yves","text":"Of course I did. Wrote it plain as day, every time. Handed them to Father Jean-Noël like I was supposed to."},
+                        {"character":"Yves","text":"...Guess the folks in the city don't care much about this town. Same thing when we asked them to send a stand-in organist while ours was... eh, away for a while. Nothing ever came of it.","onComplete":"click"}
                     ]},
                     {"text":"Still nicotine-free?", "once":true, "response":[
-                        {"character":"Yves","text":"So far, so good. Just came back from the nun, actually."},
+                        {"character":"Yves","text":"Holding on, but it's getting tougher. Even booked extra sessions with the nun."},
                         {"character":"Gail","text":"The one who stick needles in your...","options":[
-                            {"text":"Teeth?", "response":[{"character":"Yves","text":"Heavens, no. Still got all my teeth, and I intend to keep them. Just the ears."},{"character":"Gail","text":"(Okay, so The Tooth isn't his.)","onComplete":"ears"}]},
+                            {"text":"Teeth?", "response":[{"character":"Yves","text":"Heavens, no. Still got all my teeth, and I intend to keep them. Just the ears."},{"character":"Gail","text":"(Okay, so the Tooth isn't his.)","onComplete":"ears"}]},
                             {"text":"Ears?", "response":[{"character":"Yves","text":"That's right.","onComplete":"ears"}]},
                             {"text":"Cheeks?", "response":[{"character":"Yves","text":"...What, to grow whiskers? No, no. The ears.","onComplete":"ears"}]}
                         ]}
                     ]},
+                    {"text":"You wanted a pipe, right?","point":"n","response":[{"character":"Yves","text":"Cruel joke, {{name_yves}}. Didn't crawl back to it. Just an ashtray.","onComplete":"click"}]},
                     {"text":"..."}
                 ]}
             ],
-            "ears":[{"character":"Yves","text":"If you're curious, talk to Sister ???. She does nerves, hiccups and bad habits."}]
+            "ears":[{"character":"Yves","text":"If you're curious, talk to Sister ???. She does nerves, hiccups and bad habits.","onComplete":"click"}],
+            "wrong_items":[{"character":"Yves","text":"Not that one."}],
+            "wrong_price":[{"character":"Yves","text":"That number's out of tune."}],
+            "checkout":[{"character":"Yves","text":"Thanks. Ashes to ashes, tin to bin. Take care, {{name_yves}}."}]
         },
         "break":[{"character":"Gail", "text": "..."}],
         "next":"jeannoel"
     },
     "jeannoel":{
         "characters": [{"key":"jeannoel"}],
-        "order": [""],
-        "money":250,
+        "order": ["fleuriesy"],
+        "money":200,
         "dialogues":{
         },
         "next":"erika"
@@ -165,5 +208,13 @@
                 {"character":"Erika","text":"FRIDAY EVENING AHH scooter ride"}
             ]
         }
-    }
+    },
+    "intro":[
+        {
+            "bgKey": 0, 
+            "dialog": [
+                { "text": "Jars Day" }
+            ]
+        }
+    ]
 }

@@ -182,7 +182,9 @@
             ]}]
         },
         "break":[
-            {"character":"Gail", "text":"*sigh*"}
+            {"character":"Gail", "text":"*sigh*"},
+            {"character":"Gail", "text":"...Oh. The typewriter. Félix really did get me one. Cool."},
+            {"character":"Gail","text":"Guess that means I can try those puzzles in the paper now."}
         ],
         "next":"erika2"
     },

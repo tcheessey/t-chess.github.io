@@ -63,7 +63,7 @@
         "money":500,
         "dialogues": {
             "entry":[
-                {"character":"Erika","text":"Good morning, my cigarette princess!"},
+                {"character":"Erika","text":"Good morning, my cigarette princess."},
                 {"character":"Erika","text":"So, our new neighbour - bad omen or second coming?"},
                 {"character":"Gail","text":"...?"},
                 {"character":"Erika","text":"What? Oh, don't tell me you haven't read the news. Are you living under a rock?", "faces": {"erika":"sadbrows-neutral"},"facesAfter":{"erika":null}},
@@ -157,7 +157,7 @@
             "click":[
                 {"character":"Lispy Kid","text":"...", "faces": {"lispy":"hat"},"options":[
                     {"text":"(One of the organ stash kids?)", "if":"dots_asked","response":[{"character":"Gail","text":"...","options":[
-                        {"text":"Drop's still safe?","response":[{"character":"Lispy Kid","text":"..."},{"character":"Lispy Kid","text":"...Mouthth ain't shut. Milk'th already thpilled. That meanth no.", "faces": {"lispy":"hat-grr"},"onComplete":"click"}]},
+                        {"text":"Drop's still safe?","response":[{"character":"Lispy Kid","text":"..."},{"character":"Lispy Kid","text":"...Mouthth ain't shut. Milk'th already thpilled. That meanth the drop'th thomewhere elthe now.", "faces": {"lispy":"hat-grr"},"onComplete":"click"}]},
                         {"text":"Ever stored anything inside the church organ?","response":[{"character":"Lispy Kid","text":"...No.", "faces": {"lispy":"hat-grr"},"options":[
                             {"text":"No wonder it fell apart","flag":"lispyfaild3","response":[{"character":"Lispy Kid","text":"...It held up fine till thomeone thtuck their nothe where it didn't belong.","onComplete":"click"}]},
                             {"text":"You think I'm a snitch?","response":[{"character":"Lispy Kid","text":"...Dunno you yet. Could be. Could not. After the milk thpill, we don't trutht jutht anyone.","onComplete":"click"}]}
@@ -169,9 +169,9 @@
                     ]}],"required":true,"once":true},
                     {"text":"You were part of the Seal Gang I read about?", "response":[
                         {"character":"Lispy Kid","text":"We're not a gang. We're a pod. Like seals.", "faces": {"lispy":"hat-smile"},"facesAfter":{"lispy":"hat"} },
-                        {"character":"Lispy Kid","text":"Our job's to keep it safe. Old people keep naming it, explaining it, or saying it should be somewhere else. Nah. We will protect our bro from that.","onComplete":"click" }
+                        {"character":"Lispy Kid","text":"Our job's to keep it safe. Old people keep naming it, inventing theories, or saying it should be somewhere else. Nah. We will protect our bro from that.","onComplete":"click" }
                     ]},
-                    {"text":"Remind me what you wanted?","response":[{"character":"Lispy Kid","text":"Menthol JC, matcheth and four toffieth. Pleathe."}]},
+                    {"text":"Remind me what you wanted?","response":[{"character":"Lispy Kid","text":"Menthol JC and four toffieth. Pleathe."}]},
                     {"text":"..."}
                 ]}
             ],
@@ -232,8 +232,8 @@
         "money":250,
         "dialogues":{
             "entry":[{"character":"???", "text":"...Evening."},{"character":"Gail", "text":"(What a...)","options":[
-                {"text":"Tragic Thing","flag":"pierrick_tragic", "event":"named"},{"text":"Cute Thing","flag":"pierrick_cute", "event":"named"},{"text":"...Thing?", "event":"named"}
-            ]}],
+                {"text":"Tragic Thing","flag":"pierrick_tragic"},{"text":"Cute Thing","flag":"pierrick_cute"},{"text":"...Thing?"}
+            ],"onComplete":"named"}],
             "named":[{"character":"{{pierrick}}", "text":"Just... Over tobacco, rolling papers and matches, please. Thank you."}],
             "click":[
                 {"character":"Gail","text":"(Oh, I know that look. That ugly little panic when you know someone's about to speak to you and you just freeze a little.)", "options":[
