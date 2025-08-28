@@ -317,7 +317,7 @@
     "outro":{
         "characters":[
             {"key":"gail","x":590,"y":356},
-            {"key":"gail","x":0,"y":0},
+            {"key":"yves","x":55,"y":248},
             {"key":"felix","x":560,"y":144}
         ],
         "dialogues":{

@@ -1,7 +1,7 @@
 {
     "d5start":{
-        "dialogues":{
-        },
+        "dialogues":{"entry":[{"character":"Gail","text":"Good morning."}]},
+        "break":[{"character":"Gail","text":"kjsdhfks"}],
         "next":"postman"
     },
     "postman":{
@@ -17,25 +17,25 @@
         "order":["jcr", "news"],
         "money":1000,
         "dialogues":{},
-        "break":[],
         "next":"lucie"
     },
-    "priest":{
+    "lucie":{
         "characters": [{"key":"lucie"}],
         "order":["fleuriesy"],
         "money":200,
         "dialogues":{},
-        "next":"pierrick"
+        "break":[],
+        "next":"leo"
     },
-    "babette":{
-        "characters": [{"key":"babette"}],
+    "leo":{
+        "characters": [{"key":"leo"}],
         "order":["fleuriesy"],
         "money":200,
         "dialogues":{},
         "next":"pierrick"
     },
     "pierrick":{
-        "characters": [{"key":"fisherman"}],
+        "characters": [{"key":"pierrick"}],
         "order":["over"],
         "money":1000,
         "dialogues":{}
