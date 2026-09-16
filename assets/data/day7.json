@@ -1,0 +1,63 @@
+{
+    "felixd7":{
+        "characters": [{"key":"felix"}],
+        "order": ["morleyt","papirky"],
+        "money":200,
+        "dialogues":{
+            "entry":[{"character":"Félix","text":"a tin of morley and papers"}],
+            "click":[{"character":"Félix","text":"...","options":[
+                {"text":"where tuth","if":"toothShift7"},
+                {"text":"decor","if":"decorShift7"}
+            ]}]
+        },
+        "music":"carneval-waltz",
+        "next":"yvpk"
+    },
+    "yvpk":{
+        "characters": [{"key":"felix"},{"key":"yves"},{"key":"pierrick"}],
+        "order": ["bruyere"],
+        "money":200,
+        "dialogues":{
+            "dontthinktoomuchpireerick":"",
+            "decorLateorder":""
+        },
+        "music":"cakewalk",
+        "next":"yvpk2"
+    },
+    "yvpk2":{
+        "characters": [{"key":"pierrick"}],
+        "order": ["over","papirky","morleyb"],
+        "money":200,
+        "dialogues":{
+        }
+    },
+    "nunsd7":{
+        "characters":[{"key":"babette"},{"key":"lucie"}],
+        "order": ["cigar"],
+        "money":200,
+        "dialogues":{
+        }
+    },
+    "lispy":"seal left",
+    "leo":"ah i already love this town",
+    "erikad7":"seal left... chewing tobacco....",
+    "fisherman":{
+        "characters": [{"key":"fisher"}],
+        "order":["jcbX4  !!!!!!!!! BLUE"],
+        "money":600,
+        "dialogues":{
+            "entry":[{"character":"Fisherman", "text":"We've met again, {{name_fisherman}}"}],
+            "click":[
+                {"character":"Fisherman","text":"How going?","options":[
+                    {"text":"Organ?"},
+                    {"text":"Seal (saw it jumping into the sea) -> sleeping"},
+                    {"text":"You? -> departing rn"},
+                    "my sister s different shes strong and does what she wants (eel)",
+                    {"text":"..."}
+                ]}
+            ]
+        },
+        "music":"berceuse",
+        "break":[{"character":"Gail","text":"","onComplete":"game_end"}]
+    }
+}
