@@ -93,23 +93,23 @@
         "next":"babette"
     },
     "babette":{
-        "characters": [{"key":"babette","face":"sad","x":250}],
+        "characters": [{"key":"babette","face":"sad","defaultFace":"sad","x":250}],
         "order":["fleuriesy"],
         "money":160,
         "music":"gavotte",
         "dialogues":{
             "entry":[
-                {"character":"Babette", "text":"Hi... dear.", "faces":{"babette":"sad"}},
-                {"character":"Babette", "text":"Umm.", "faces":{"babette":"sad"}},
-                {"character":"Babette", "text":"...Sorry. Give me a second to settle my thoughts first. I'd rather not add another bad choice to the list.", "faces":{"babette":"sad"},"options":[
+                {"character":"Babette", "text":"Hi... dear."},
+                {"character":"Babette", "text":"Umm."},
+                {"character":"Babette", "text":"...Sorry. Give me a second to settle my thoughts first. I'd rather not add another bad choice to the list.","options":[
                     {"text":"I know what might help"},
-                    {"text":"...", "flag":"babetteNope","response":[{"character":"Babette","text":"*sigh*", "faces":{"babette":"sad"}},{"character":"Babette","text":"..."},{"character":"Babette","text":"...Right. Let's not overthink it."},{"character":"Babette","text":"Thank you for waiting. Yellow Fleuries, please.", "faces":{"babette":"smile"}}]}
+                    {"text":"...", "flag":"babetteNope","response":[{"character":"Babette","text":"*sigh*"},{"character":"Babette","text":"..."},{"character":"Babette","text":"...Right. Let's not overthink it."},{"character":"Babette","text":"Thank you for waiting. Yellow Fleuries, please.", "faces":{"babette":"default"}}]}
             ]}],
             "click":[{"character":"Babette","text":"Not now, darling."}],
-            "wrong_items":[{"character":"Babette", "text":"That's not it, darling. I think... yellow Fleuries might help me.", "faces":{"babette":"sad"},"flag":"babetteNope"}],
+            "wrong_items":[{"character":"Babette", "text":"That's not it, darling. I think... yellow Fleuries might help me.","flag":"babetteNope"}],
             "wrong_items_babetteNope":[{"character":"Babette", "text":"Yellow Fleuries, dear."}],
             "paying_babetteYes":[
-                {"character":"Babette", "text":"Hm...", "faces":{"babette":"sad"},"onComplete":"babette_cig"},
+                {"character":"Babette", "text":"Hm...","onComplete":"babette_cig"},
                 {"character":"Babette", "text":"..."},
                 {"character":"Babette", "text":"...Mhm. That's what I needed. You got it before I did."},
                 {"character":"Babette", "text":"Maybe..."},
@@ -125,7 +125,7 @@
             ],
             "lak":[
                 {"character":"Babette", "text":"Alright... Imagine a quite afternoon in the Lord's house. Two women of faith on a bench, discussing John 13 and tending to a small matter of foot care."},
-                {"character":"Babette", "text":"Then, quite suddenly, they realise a bottle of nail polish may have slipped beneath the bench. And seeped. Onto some rather old and regrettably wooden... ehm, structure.", "faces":{"babette":"sad"}},
+                {"character":"Babette", "text":"Then, quite suddenly, they realise a bottle of nail polish may have slipped beneath the bench. And seeped. Onto some rather old and regrettably wooden... ehm, structure."},
                 {"character":"Babette", "text":"What, dear, would you do?","options":[
                     {"text":"Call the repairman","response":[{"character":"Babette","text":"Mmm, in theory, yes. But it felt a bit... premature.","onComplete":"acetone"}]},
                     {"text":"Pray for forgiveness","point":"p","response":[{"character":"Babette","text":"Yes, but God tends to appreciate... effort.","onComplete":"acetone"}]},
@@ -134,7 +134,7 @@
                 ]}
             ],
             "acetone":[{"character":"Babette", "text":"So... You take the acetone and clean it properly. Very properly. To be certain nothing improper remains."},
-                {"character":"Babette", "text":"But wood remembers things. And suddenly the Lord's house smells... unmistakable. Mass is approaching. What now?", "faces":{"babette":"sad"},"options":[
+                {"character":"Babette", "text":"But wood remembers things. And suddenly the Lord's house smells... unmistakable. Mass is approaching. What now?","options":[
                     {"text":"Accept the consequences","response":[{"character":"Babette","text":"...Mhm. Very honest of you."},{"character":"Babette","text":"...","onComplete":"water"}]},
                     {"text":"Cover the smell","point":"n","response":[{"character":"Babette","text":"No, that won't do. One doesn't answer a mistake with another veil.","onComplete":"water"}]},
                     {"text":"Rinse it with water","response":[{"character":"Babette","text":"Right? It sounds like a good solution.","onComplete":"water"}]}
@@ -153,14 +153,14 @@
                     {"text":"Confess","response":[{"character":"Babette", "text":"Yes. That's the only truly correct answer. You admit the fault. You don't improvise.","onComplete":"finale"}]}
                 ]}
             ],
-            "judge":[{"character":"Babette", "text":"Oh no. That would be irresponsible. Interference without understanding only invites further sin.", "faces":{"babette":"sad"},"onComplete":"finale"}],
+            "judge":[{"character":"Babette", "text":"Oh no. That would be irresponsible. Interference without understanding only invites further sin.","onComplete":"finale"}],
             "finale":[
                 {"character":"Babette", "text":"We confessed everything to Father Jean-Noël. Ready for punishment, biblical metaphors, lectures about pride and carelessness."},
-                {"character":"Babette", "text":"But no. No fire, no brimstone. He just told us to raise our voices over the worst parts, and asked Noose Boy to swap the hymns for ones with fewer low notes. Convinced him it was a liturgical innovation."},
+                {"character":"Babette", "text":"But no. No fire, no brimstone. He just told us to raise our voices over the worst parts, and asked Noose Boy to swap the hymns for ones with fewer low notes. Convinced him it was a liturgical innovation.", "faces":{"babette":"default"}},
                 {"character":"Babette", "text":"The outcome was... cheerful. Less groaning from the pedals, more from the congregation. Even the shy ones joined in. It was lovely.", "faces":{"babette":"smile"}},
                 {"character":"Babette", "text":"...But when it finally gave up completely, Lucie became determined again. Said it was unfair and we ought to do more. I said we'd already done far too much."},
                 {"character":"Babette", "text":"She said I was only afraid the Matron would strip us of our little privilege of helping Father Jean-Noël and make us join the rest of the sisters doing tasks we can't stand. I said she wanted heroism where none was needed. Things... escalated."},
-                {"character":"Babette", "text":"Perhaps she's not wrong. But I'm afraid her truth will cost us more than we can bear. We'd do the honest thing... and that would be the end of St. Dymphne's for us.", "faces":{"babette":"sad"},"options":[
+                {"character":"Babette", "text":"Perhaps she's not wrong. But I'm afraid her truth will cost us more than we can bear. We'd do the honest thing... and that would be the end of St. Dymphne's for us.","options":[
                     {"text":"Nothing you do now will fix it anyway","response":[{"character":"Babette","text":"Right? I know it's bleak, but it feels honest.","onComplete":"advice"}]},
                     {"text":"Leaving it unsaid will only gnaw at you","response":[
                         {"character":"Babette","text":"You sound exactly like her. I wish either of you were wrong."},
@@ -172,29 +172,29 @@
                         {"character":"Babette","text":"That feels terribly modern and morally ambiguous."},
                         {"character":"Gail","text":"So did nail polish on consecrated wood."},
                         {"character":"Babette","text":"..."},
-                        {"character":"Babette","text":"Well... We don't exactly receive salaries but perhaps we could devise something. Lucie and I can be rather resourceful when we put our heads together.","onComplete":"advice"}
+                        {"character":"Babette","text":"Well... We don't exactly receive salaries but perhaps we could devise something. Lucie and I can be rather resourceful when we put our heads together.", "faces":{"babette":"default"},"onComplete":"advice"}
                     ]}
                 ]}
             ],
             "advice":[
                 {"character":"Babette", "text":"*sigh*"},
-                {"character":"Babette", "text":"Right. I think I'll go and settle it with Lucie properly. She'll be unbearable for a minute. I will too.", "faces":{"babette":"smile"}},
-                {"character":"Babette","text":"Then we'll share a cigarette and decide things together. As usual."},
-                {"character":"Babette", "text":"Thank you, dear. For listening. And for the Fleuries."}
+                {"character":"Babette", "text":"Right. I think I'll go and settle it with Lucie properly. She'll be unbearable for a minute. I will too.", "faces":{"babette":"default"}},
+                {"character":"Babette","text":"Then we'll share a cigarette and decide things together. As usual.", "faces":{"babette":"default"}},
+                {"character":"Babette", "text":"Thank you, dear. For listening. And for the Fleuries.", "faces":{"babette":"default"}}
             ],
             "toooth":false,
             "checkout":[{"character":"Babette", "text":"Actually... there is one more thing.","onComplete":"end"}],
             "checkout_babetteNope":[{"character":"Babette", "text":"Thank you, dear."},{"character":"Babette", "text":"...There is something I wanted to tell you, if you don't mind.","onComplete":"end"}],
             "end":[
-                {"character":"Babette", "text":"I didn't mean to involve you, truly... but you've already caught a corner of it, haven't you.", "faces":{"babette":"sad"}},
+                {"character":"Babette", "text":"I didn't mean to involve you, truly... but you've already caught a corner of it, haven't you."},
                 {"character":"Babette", "text":"Yesterday's service became... complicated. "},
                 {"character":"Babette","text":"New faces who weren't quite prepared for how we've been doing Mass lately. Then the altar boys brought the seal into the nave. Then that gentleman decided he had something to say..."},
                 {"character":"Babette", "text":"And Lucie... {{babette5}} and..."},
-                {"character":"Babette", "text":"*sigh*", "faces":{"babette":"sad"}},
+                {"character":"Babette", "text":"*sigh*"},
                 {"character":"Babette", "text":"What I'm trying to say is... it wasn't just Father. We all played our part in that scene, yet it's only his name that was carried to the bishop."},
                 {"character":"Babette", "text":"And now it's not just our usual parish gossip anymore, but rather something... administrative."},
                 {"character":"Babette", "text":"Anyway... However it ends, and whatever people start saying, I just didn't want you thinking it was simply another one of Father Jean-Noël situations. It wasn't simple. And he wasn't alone in it."},
-                {"character":"Babette", "text":"I've taken enough of your time already. God keep you, dear. Preferably in one piece.", "faces":{"babette":"smile"},"onComplete":"scene_end"}
+                {"character":"Babette", "text":"I've taken enough of your time already. God keep you, dear. Preferably in one piece.", "faces":{"babette":"default"},"onComplete":"scene_end"}
             ]
         },
         "next":"postman"
@@ -226,19 +226,19 @@
                 ]}
             ],
             "toooth":[
-                {"character":"Postman","text":"...Oh. A tooth.", "faces":{"postman":"hat-eyes"}},
+                {"character":"Postman","text":"...Oh. A tooth.", "faces":{"postman":"eyes"}},
                 {"character":"Postman","text":"..."},
-                {"character":"Postman", "text":"Right. Must be mine.", "faces":{"postman":"hat-eyes"}},
+                {"character":"Postman", "text":"Right. Must be mine.", "faces":{"postman":"eyes"}},
                 {"character":"Postman", "text":"I lost one that ill-fated day in the church... when Father Jean-Noël asked me to help with those boxes. The day I've been trying not to remember."},
                 {"character":"Postman", "text":"..."},
                 {"character":"Gail", "text":"..."},
                 {"character":"Gail", "text":"...Do you want to talk abou-"},
-                {"character":"Postman", "text":"I was meant to be done for the day.","faces":{"postman":"hat-eyes"}},
-                {"character":"Gail", "text":"...", "faces":{"postman":"hat-eyes"}},
+                {"character":"Postman", "text":"I was meant to be done for the day.","faces":{"postman":"eyes"}},
+                {"character":"Gail", "text":"...", "faces":{"postman":"eyes"}},
                 {"character":"Postman", "text":"Just wanted to get home before the rain... But he said since I was already there, maybe I could help him move a few boxes. Like a good Christian."},
                 {"character":"Postman", "text":"I said yes... but I didn't want to stay. So I started rushing, not really looking where I was going. Of course it couldn't end well..."},
                 {"character":"Postman", "text":"My foot caught on something, and the box fell... right onto the poor thing."},
-                {"character":"Postman", "text":"I think one of us let out a small cry. Then... only silence, dust, and those white fingers scattered across the floor like dropped dominoes...", "faces":{"postman":"hat-eyes"}},
+                {"character":"Postman", "text":"I think one of us let out a small cry. Then... only silence, dust, and those white fingers scattered across the floor like dropped dominoes...", "faces":{"postman":"eyes"}},
                 {"character":"Postman", "text":"I tried to fix it with a toffee I was chewing. Pressed the pieces back together. They stuck, sort of. Sweet and awful.","flag":"postmanToothGiven"},
                 {"character":"Gail", "text":"By white domino fingers you mean...","options":[
                     {"text":"Organ keys?", "response":[
@@ -259,15 +259,15 @@
                     ]}
                 ]},
                 {"character":"Postman", "text":"I guess I tore my own tooth out on that same toffee, trying to hide the damage. Wanted to believe since it hurt a little, it would count as repentance. Made me feel a bit less guilty..."},
-                {"character":"Postman", "text":"But looking at this tooth now... I don't think that's how it works.", "faces":{"postman":"hat-eyes"}},
+                {"character":"Postman", "text":"But looking at this tooth now... I don't think that's how it works.", "faces":{"postman":"eyes"}},
                 {"character":"Postman", "text":"Hm...","onComplete":"postmanToothTaken"}
             ],
             "wrong_items": [{ "character": "Postman", "text": "JC. Blue packet. And three toffee candies. Wrapper with cow spots." }],
-            "wrong_price": [{ "character": "Postman", "text": "It's 189.", "faces": {"postman":"hat-eyes"} }],
+            "wrong_price": [{ "character": "Postman", "text": "It's 189.", "faces": {"postman":"eyes"} }],
            
             "checkout":[{"character":"Postman","text":"Thanks. Time to get back to work.","onComplete":"scene_end"}],
             "checkout_postmanToothGiven":[{"character":"Postman","text":"Thanks."},{"character":"Postman", "text":"...Hm. Actually, wait a second. Looking closer at the jar, that's not even a front tooth. Mine was front."},
-                {"character":"Postman","text":"So... not mine. Here... take it back.", "faces":{"postman":"hat-eyes"},"onComplete":"toothReturn"},
+                {"character":"Postman","text":"So... not mine. Here... take it back.", "faces":{"postman":"eyes"},"onComplete":"toothReturn"},
                 {"character":"Gail","text":"(And here I thought we'd at least solved one thing.)"},
                 {"character":"Postman","text":"Well... That was unnecessary. I'll just... get back to work now.","onComplete":"scene_end"}],
 

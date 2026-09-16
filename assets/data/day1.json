@@ -28,12 +28,7 @@
                 {"text":"[Show detailed instructions]","event":"howto"},
                 {"text":"..."}
             ]}],
-            "paying":[{ "character": "Félix", "text": "Here's 300. Let's see if you can count.", "faces": {"felix":"he"}},{"character":"Gail","text":"(Rude. I'll think about giving you your full change.)","faces":{"felix":"he"}}],
-            "wrong_change_under":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.","point":"n","flag":"shortchanging","faces":{"felix":"he"},"options":[
-                {"text":"Yet...","point":"n","response":[{"character":"Félix","text":"Ha. That's the spirit. I like it.", "faces": {"felix":"he"}}]},
-                {"text":"..."}
-            ]}],
-            "wrong_change_under_shortchanging":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.", "faces": {"felix":"he"}}],
+            "wrong_change_under":[{ "character": "Félix", "text": "Careful, short-changing is a skill. You clearly don't have it yet.","faces":{"felix":"he"}}],
             "wrong_change_over":[{ "character": "Félix", "text": "You're being generous. That's too much."}],
             "checkout":[{ "character": "Félix", "text": "See? Easy enough.","onComplete":"scene_end"}],
             "checkout_st1":[{ "character": "Félix", "text": "Okay, you figured it out, eventually.","onComplete":"scene_end"}]
