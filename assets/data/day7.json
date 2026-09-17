@@ -1,58 +1,113 @@
 {
     "felixd7":{
-        "characters": [{"key":"felix"}],
-        "order": ["morleyt","papirky"],
-        "money":200,
+        "characters": [{"key":"felix","x":270}],
         "dialogues":{
-            "entry":[{"character":"Félix","text":"a tin of morley and papers"}],
-            "click":[{"character":"Félix","text":"...","options":[
-                {"text":"where tuth","if":"toothShift7"},
-                {"text":"decor","if":"decorShift7"}
-            ]}]
+            "entry":[
+                {"character":"Félix","text":"Morning, kid."},
+                {"character":"Félix","text":"ready for your first shift when people stopped talking about the damn organ and their stupid stories of how they fucked it up?"},
+                {"character":"Félix","text":"it was still pretty heated yesterday after mass but i have a feeling the town is over it"},
+                {"character":"Félix","text":"as for another 'clearly not tobacco shop errands'...","onComplete":"tooth"}
+            ],
+            "tooth":[{"character":"Félix","text":"I see you handled the tooth. good.","onComplete":"decor"}],
+            "tooth_toothShift7":[{"character":"Félix","text":"I handled the tooth. heh loser.","onComplete":"decor"}],
+
+            "decor":[{"character":"Félix","text":"What else...","onComplete":"pay"}],
+
+            "decor_decorLateorder":[{"character":"Félix","text":"btw been forgetting to tell you about this decor...","onComplete":"decor2"}],
+            "decor2_outOfBin":[{"character":"Félix","text":"Did you loot that out of some fairground rubbish heap?","onComplete":"decor3"}],
+            "decor2_badTaste":[{"character":"Félix","text":"It's... atrocious, cheerful, and hurting the eyes in a very festive way.","onComplete":"decor3"}],
+            "decor2_uglyHome":[{"character":"Félix","text":"Well. That's got... just the right kind of domestic ugliness to it, I must say.","onComplete":"decor3"}],
+            "decor2":[{"character":"Félix","text":"Well. That's... something.","onComplete":"decor3"}],
+            "decor3":[{"character":"Félix","text":"i like it. really suits the shop.","onComplete":"pay"}],
+
+            "decor_decorShift7":[
+                {"character":"Félix","text":"Also, a parcel showed up yesterday. I didn't order anything, so I assume this is your doing."},
+                {"character":"Félix","text":"No idea who your mysterious \"trusted supplier\" (of interior decorations) is, but... ehm."},
+                {"character":"Félix","text":"Good choice. It suits the shop.","onComplete":"pay"}
+            ],
+            
+            "pay":[
+                {"character":"Félix","text":"...Ah, right. Before I forget... here. Your pay."},
+                {"character":"Gail","text":"Thought it was going against the debt."},
+                {"character":"Félix","text":"Mm. About that."},
+                {"character":"Félix","text":"There was a debt.... Technically. Some bits and pieces, here and there."},
+                {"character":"Félix","text":"But nowhere near enough to justify making you stand here twice a week for this long."},
+                {"character":"Gail","text":"...What?"},
+                {"character":"Félix","text":"You looked like you needed /to be employed/busy with something."},
+                {"character":"Gail","text":"So you lied to me."},
+                {"character":"Félix","text":"I exaggerated administratively."},
+                {"character":"Gail","text":"You lied."},
+                {"character":"Félix","text":"Fine. I lied."},
+                {"character":"Félix","text":"Anyway, we're square. If you show up Friday, it'll be because you made a poor personal choice. Which I fully support.","onComplete":"scene_end"}
+            ]
         },
         "music":"carneval-waltz",
         "next":"yvpk"
     },
     "yvpk":{
-        "characters": [{"key":"felix"},{"key":"yves"},{"key":"pierrick"}],
-        "order": ["bruyere"],
+        "characters": [{"key":"felix","x":270},{"key":"yves","x":500},{"key":"pierrick","x":-20,"defaultFace":"meh"}],
+        "order": ["bruyere","over","papirky","morleyb"],
         "money":200,
         "dialogues":{
-            "dontthinktoomuchpireerick":"",
-            "decorLateorder":""
+            "entry":[
+                {"character":"Yves","text":"Morning."},
+                {"character":"Pierrick","text":"Hi."},
+                {"character":"Félix","text":"oh hi music lads"},
+                {"character":"","text":""},
+
+                {"character":"Yves","text":"Bruyère, please. (started smoking again)"},
+                {"character":"Pierrick","text":"For me Over tobacco and papers."},
+                {"character":"Pierrick","text":"oh and um menthol morleys too please"},
+                {"character":"Félix","text":"HA (stupid joke on pierrick).","onComplete":"pk7move"},
+                {"character":"Pierrick","text":"...","faces":{"pierrick":"meh"}},
+                {"character":"Yves","text":"Felix..."}
+            ],
+            "click":[{"character":"Music Lads","text":"...","options":[
+                {"text":"How's workshop","response":[
+                    {"character":"Yves","text":"organs finally done now just regular untuned pianos and "},
+                    {"character":"","text":"(about mass? cuz gail wasnt there)","onComplete":"organ"}
+                ]},
+                {"text":"(something referencing expresso evening)","if":"expresso","response":[{"character":"","text":""}]},
+                {"text":"Pipe's back?","response":[{"character":"Yves","text":"yep"}]},
+                {"text":"..."}
+            ]}],
+            "organ_organComplete":[{"text":"most positive end"}],
+            "organ_someoneSolved":[{"text":"pretty positive end"}],
+            "organ":[{"text":"it was so bad it will be replaced with piano"}],
+
+            "checkout":[
+                {"character":"Yves","text":"tnx im going to workshop"},
+                {"character":"Pierrick","text":"i need to go somewhere for a sec first... and then join you"},
+                {"character":"felix","text":"leaving too"}
+            ]
         },
         "music":"cakewalk",
-        "next":"yvpk2"
-    },
-    "yvpk2":{
-        "characters": [{"key":"pierrick"}],
-        "order": ["over","papirky","morleyb"],
-        "money":200,
-        "dialogues":{
-        }
+        "next":"nunsd7"
     },
     "nunsd7":{
         "characters":[{"key":"babette"},{"key":"lucie"}],
         "order": ["cigar"],
         "money":200,
         "dialogues":{
+            "if they confessed":"they wont go to st dymphne anyway but at least they re still friends",
+            "if they instead made something practical/financial for the church":"they're still there + their stupid way of how they contibuted"
         }
     },
-    "lispy":"seal left",
     "leo":"ah i already love this town",
     "erikad7":"seal left... chewing tobacco....",
     "fisherman":{
         "characters": [{"key":"fisher"}],
-        "order":["jcbX4  !!!!!!!!! BLUE"],
+        "order":["jcbX4"],
         "money":600,
         "dialogues":{
-            "entry":[{"character":"Fisherman", "text":"We've met again, {{name_fisherman}}"}],
+            "entry":[
+                {"character":"Fisherman", "text":"We've met again."},
+                {"character":"Fisherman", "text":"Four packs of JCs, please. Softer ones. Should be enough for first days."}
+            ],
             "click":[
                 {"character":"Fisherman","text":"How going?","options":[
-                    {"text":"Organ?"},
-                    {"text":"Seal (saw it jumping into the sea) -> sleeping"},
-                    {"text":"You? -> departing rn"},
-                    "my sister s different shes strong and does what she wants (eel)",
+                    {"text":"boat?"},
+                    {"text":"trawler again?"},
                     {"text":"..."}
                 ]}
             ]

@@ -124,7 +124,7 @@
                 ]}
             ],
             "lak":[
-                {"character":"Babette", "text":"Alright... Imagine a quite afternoon in the Lord's house. Two women of faith on a bench, discussing John 13 and tending to a small matter of foot care."},
+                {"character":"Babette", "text":"Alright... Imagine a quiet afternoon in the Lord's house. Two women of faith on a bench, discussing John 13 and tending to a small matter of foot care."},
                 {"character":"Babette", "text":"Then, quite suddenly, they realise a bottle of nail polish may have slipped beneath the bench. And seeped. Onto some rather old and regrettably wooden... ehm, structure."},
                 {"character":"Babette", "text":"What, dear, would you do?","options":[
                     {"text":"Call the repairman","response":[{"character":"Babette","text":"Mmm, in theory, yes. But it felt a bit... premature.","onComplete":"acetone"}]},

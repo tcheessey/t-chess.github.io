@@ -106,10 +106,8 @@
                 {"character":"Postman","text":"...","options":[
                     {"text":"You're already back at work?", "required":true, "once":true, "response":[
                         {"character":"Postman","text":"And you're already back in town, aren't you?", "faces": {"postman":"eyes"}},
-                        {"character":"Postman","text":"...Of course I'm back. A little \"mild head injury and mud exposure\" won't stop me or my bike.","options":[
-                            {"text":"That's the spirit","response":[{"character":"Postman","text":"Glad you understand.", "onComplete":"bell"}]},
-                            {"text":"I'd just lie in a ditch forever","point":"p","response":[{"character":"Postman","text":"Yeah, I used to feel like that. Then one day I decided I was a cat, and God gave me nine lives.", "onComplete":"bell"}]}
-                        ]}
+                        {"character":"Postman","text":"...Of course I'm back. A little \"mild head injury and mud exposure\" won't stop me or my bike."},
+                        { "character": "Postman", "text": "Lost the bell again, though. Shame. I liked that one.", "onComplete":"click" }
                     ]},
                     {"text":"What are blue Jesuses?","once":true,"flag":"jesuses","response":[{"character":"Postman","text":"Oh, blue JC. Jesus Christ, a lot of people call them that."},{"character":"Postman","text":"You know what those letters actually stand for?","options":[
                         {"text":"Probably Jean-Claude or some other name","flag":"jeanclaudes","response":[{ "character": "Postman", "text": "Okay. Sounds legit.", "onComplete":"click"}]},
@@ -120,7 +118,6 @@
                     {"text":"..."}
                 ]}
             ],
-            "bell":[{ "character": "Postman", "text": "Lost the bell again, though. Shame. I liked that one.", "onComplete":"click" }],
             "wrong_items": [{ "character": "Postman", "text": "That's not mine." }],
             "wrong_items_jesuses": [{ "character": "Postman", "text": "JC. Blue packet. And two toffee candies. Wrapper with cow spots." }],
             "wrong_price": [{ "character": "Postman", "text": "It's 176.", "faces": {"postman":"eyes"} }],
@@ -273,7 +270,7 @@
                         {"character":"Yves","text":"...Can't say why. Maybe there's no why.","onComplete":"root"}
                     ]},
                     {"text":"About the bellows...","if":"bellowsSolved","flag":"bellowsAsked","once":true,"response":[
-                        {"character":"Gail","text":"(Alright. Let's pull that thread.)", "faces": {"yves":"hm"},"flag":"dotsorbellowsasked"},
+                        {"character":"Gail","text":"(Alright. Let's pull that thread.)", "faces": {"yves":"hm"}},
                         {"character":"Gail","text":"Couldn't it have been prevented? I heard bellows are often the first thing to go. Problematic part.", "faces": {"yves":"hm"}},
                         {"character":"Gail","text":"...Most irritating to check.", "faces": {"yves":"hm"}},
                         {"character":"Yves","text":"...Bellows are a pain, yeah. And in case of this particular organ, what was the point anyway?", "faces": {"yves":"hm"}},
@@ -293,8 +290,8 @@
                         {"character":"Yves","text":"...I'll take it off the repair cost. Not much, but fair's fair.", "faces": {"yves":"hm"}},
                         {"character":"Yves","text":"You can be really nasty, huh?","onComplete":"root"}
                     ]},
-                    {"text":"(End conversation)", "if":"d2nothingSolved","event":"scene_end"},
-                    {"text":"(End conversation)", "if":"dotsorbellowsasked","event":"scene_end"}
+                    {"text":"(End conversation)", "ifnot":"bellowsSolved","event":"scene_end"},
+                    {"text":"(End conversation)", "if":"bellowsAsked","event":"scene_end"}
                 ]}
             ]
         },

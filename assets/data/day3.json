@@ -198,7 +198,8 @@
                 ]},
                 { "character": "Lispy Kid", "text": "Later.", "onComplete":"scene_end"}
             ],
-            "after":[{"character":"Gail", "text": "(...I wonder if we looked just as ridiculous back then.)"},{"character":"Gail", "text": "(Trying to buy cigs, I mean. Not the pod nonsense.)","onComplete":"next_scene"}]
+            "after":[{"character":"Gail", "text": "(...I wonder if we looked just as ridiculous back then.)"},{"character":"Gail", "text": "(Trying to buy cigs, I mean. Not the pod nonsense.)","onComplete":"next_scene"}],
+            "after_shooshoo":[{"character":"Gail", "text": "(...I wonder if we looked just as ridiculous back then.)","onComplete":"next_scene"}]
         },
         "music":"cabinet-march",
         "next":"mado1"
