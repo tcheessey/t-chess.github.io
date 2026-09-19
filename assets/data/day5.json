@@ -172,7 +172,7 @@
                         {"character":"Babette","text":"That feels terribly modern and morally ambiguous."},
                         {"character":"Gail","text":"So did nail polish on consecrated wood."},
                         {"character":"Babette","text":"..."},
-                        {"character":"Babette","text":"Well... We don't exactly receive salaries but perhaps we could devise something. Lucie and I can be rather resourceful when we put our heads together.", "faces":{"babette":"default"},"onComplete":"advice"}
+                        {"character":"Babette","text":"...We don't exactly receive salaries but perhaps we could devise something. Lucie and I can be rather resourceful when we put our heads together.", "faces":{"babette":"default"},"onComplete":"advice"}
                     ]}
                 ]}
             ],

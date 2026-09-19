@@ -75,20 +75,21 @@
                 {"character":"Lucie","text":"Babette.", "faces": {"babette":"smile"}},
                 {"character":"Babette","text":"Oh, don't Babette me. You started it.", "faces": {"babette":"sad"}},
                 {"character":"Lucie","text":"*sigh*", "faces": {"lucie":"sad","babette":"sad"}},
-                {"character":"Lucie","text":"We should probably get going.", "faces": {"lucie":"sad","babette":"sad"},"onComplete":"click"}
+                {"character":"Lucie","text":"We should probably get going.", "faces": {"lucie":"sad","babette":"sad"},"flag":"nunsd4clicked","onComplete":"click"}
             ],
             "click_nunsd4clicked":[
                 {"character":"Babette","text":"Huh.", "options":[
                     {"text":"Can you repeat the riddle?", "event":"repeat", "ifnot":"lavenderless"},
+                    {"text":"What was the answer again?","if":"lavenderless", "event":"wrong_items_lavenderless"},
                     {"text":"..."}
                 ]}
             ],
             "repeat":[{"character":"Babette","text":"What lulls from a drawer and eases your blues, holds the colour of veins and a yesterday bruise?","options":[
-                {"text":"Still not getting it","point":"p", "flag":"lavenderless", "response":[]},
+                {"text":"Still not getting it","point":"p","flag":"lavenderless", "event":"answer"},
                 {"text":"...","event":"click"}
             ]}],
-            "answer":[{"character":"Babette","text":"Ah, darling... It's Lavender Fleuries. Like those violet lavender sachets people keep in drawers to calm their nerves."}],
-            "wrong_items": [{ "character": "Lucie", "text": "Mm. Nope.", "flag":"lavenders1" }],
+            "answer":[{"character":"Babette","text":"Ah, darling... It's Lavender Fleuries. Like those violet lavender sachets people keep in drawers to calm their nerves.","onComplete":"click"}],
+            "wrong_items": [{ "character": "Lucie", "text": "Mm. Nope. One more try, darling.", "flag":"lavenders1" }],
             "wrong_items_lavenders1": [{ "character": "Babette", "text": "*sigh*", "flag":"lavenderless","onComplete":"answer" }],
             "wrong_items_lavenderless":[{"character":"Lucie","text":"Lavender Fleuries, dear."}],
             "wrong_price": [{"character":"Lucie", "text":"Hmm. That's not what it cost last time."}],

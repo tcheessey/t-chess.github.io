@@ -160,8 +160,8 @@
                 { "character":"Gail", "text": "(Sure he did.)", "options":[
                     {"text":"Tell him to come get them himself","response":[
                         {"character":"Lispy Kid","text":"Ugh, don't be thuch a buzzkill. Nobody elthe giveth a damn around here.","faces": {"lispy":"grr"},"options":[
-                            {"text":"Shoo shoo","point":"n","flag":"shooshoo","response":[{"character":"Lispy Kid","text":"...Whatever.","faces": {"lispy":"grr"}, "onComplete":"scene_end"}]},
-                            {"text":"Fair","response":[{"character":"Lispy Kid","text":"Cool.", "faces": {"lispy":"smile"}}]}
+                            {"text":"Fair","response":[{"character":"Lispy Kid","text":"Cool.", "faces": {"lispy":"smile"}}]},
+                            {"text":"Shoo shoo (Send him away)","point":"n","flag":"shooshoo","response":[{"character":"Lispy Kid","text":"...Whatever.","faces": {"lispy":"grr"}, "onComplete":"scene_end"}]}
                         ]}
                     ]},
                     {"text":"Okay, I don't mind","response":[
